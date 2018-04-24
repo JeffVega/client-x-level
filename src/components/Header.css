@@ -1,0 +1,8 @@
+.banner{
+  border: 3px solid black;
+  background:white;
+  text-align: center;
+  border-bottom: 2px solid brown;
+  padding-bottom: 2em;
+  background: lightgreen;
+}
