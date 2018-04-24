@@ -1,6 +1,6 @@
   import React from 'react'
 import './sign-up.css'
-
+import {API_BASE_URL} from '../config'
 export default class LoginForm extends React.Component{
 constructor(){
   super();
@@ -21,10 +21,25 @@ handlePasswordChanged(event){
   })
 }
 submitForm(event){
+  console.log(event)
   event.preventDefault();
+  return fetch(`${API_BASE_URL}/users`, {
+    method: 'POST',
+    body:JSON.stringify({
+      "username":this.state.username,
+      "password":this.state.password
+    }),
+    headers:{
+      "Content-Type": "application/json"
+    }
+})        
+    .then(response => response.json())
+    .catch(err => {
+        console.log(err)
+    })
 }
 render(){
-  console.log('state',this.state)
+  console.log('what state is this',this.state)
   return (
     <form 
     onSubmit={this.submitForm.bind(this)}
@@ -45,10 +60,8 @@ render(){
       name="psw" 
       required/>
       
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" name="remember"/> Remember me
-    </label>
+    <button type="submit">Sign Up</button>
+ 
   </form>
   );
   }
