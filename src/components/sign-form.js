@@ -23,6 +23,7 @@ handlePasswordChanged(event){
 submitForm(event){
   console.log(event)
   event.preventDefault();
+  
   return fetch(`${API_BASE_URL}/users`, {
     method: 'POST',
     body:JSON.stringify({

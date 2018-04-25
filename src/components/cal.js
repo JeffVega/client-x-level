@@ -1,7 +1,40 @@
 import React from 'react'
 import './cal.css'
-export default function Cal(props){
+export default class Cal extends React.Component{
+constructor(props){
+  super(props)
 
+  this.state ={
+    weight:undefined,
+    feet:undefined,
+    inches:undefined,
+    age:undefined,
+    sex:undefined,
+    Actitiy:undefined
+
+  }
+}
+//   For men:	BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) + 5
+// For women:	BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) - 161
+//---------------------------------------------------------------------------------------------------
+// Sedentary
+// Just normal everyday activity like a little walking, a couple flights of stairs, eating, talking etc. (REE X 1.2)
+// Light activity
+// Any activity that burns an additional 200-400 calories for females or 250-500 calories for males more than your sedentary amount. (REE x 1.375)
+// Moderate activity
+// Any activity that burns an additional 400-650 calories for females or 500-800 calories for males more than your sedentary amount. (REE x 1.55)
+// Very Active
+// Any activity that burns more than about 650 calories for females or more than 800 calories for males in addition to your sedentary amount. (REE x 1.725)
+//----------------------------------------------------------------------------------------------------
+// getting the height to cm 
+// (height * 12) + inches = "cm "
+// cm * 2.54 = 188cm
+calculateHeightToCm(feet,inches){
+  let cm = (feet * 12) + inches ;
+  let newCm = cm * 2.54;
+  return Math.round(newCm)
+}
+render(){
 return (
 <div>
 <h1 className="bannerform">CALCULATE YOUR TOTAL DAILY ENERGY EXPENDITURE</h1>
@@ -17,8 +50,10 @@ return (
     <br/>
     <label>Weight Input</label><br/>
   <input type="number" required min="0" />
-  <br/>
-    <label>Height Input</label><br/>
+    <h4>Height Input</h4>
+    <label>Feet Input</label><br/>
+  <input type="number" required min="0"/><br/>
+  <label>Inches Input</label><br/>
   <input type="number" required min="0"/>
   <br/><br/>
   <label>Actitiy Level</label>
@@ -35,4 +70,5 @@ return (
   </form>
 </div>
 );
+}
 }
