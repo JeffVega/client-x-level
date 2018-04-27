@@ -15,7 +15,9 @@ constructor(props){
   }
 }
 //   For men:	BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) + 5
+// 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) + 5 = REE
 // For women:	BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) - 161
+// 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) – 161 = REE
 //---------------------------------------------------------------------------------------------------
 // Sedentary
 // Just normal everyday activity like a little walking, a couple flights of stairs, eating, talking etc. (REE X 1.2)
@@ -26,9 +28,7 @@ constructor(props){
 // Very Active
 // Any activity that burns more than about 650 calories for females or more than 800 calories for males in addition to your sedentary amount. (REE x 1.725)
 //----------------------------------------------------------------------------------------------------
-// getting the height to cm 
-// (height * 12) + inches = "cm "
-// cm * 2.54 = 188cm
+
 calculateHeightToCm(feet,inches){
   let cm = (feet * 12) + inches ;
   let newCm = cm * 2.54;
@@ -39,7 +39,7 @@ return (
 <div>
 <h1 className="bannerform">CALCULATE YOUR TOTAL DAILY ENERGY EXPENDITURE</h1>
 <form className="calform">
-  <label>Age</label>
+  <label>Age</label><br/>
   <input type="number" min="0" max="120"/>
   <br/>
     <label>I'm A</label><br/>
