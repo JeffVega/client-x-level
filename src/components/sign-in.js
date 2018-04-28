@@ -1,7 +1,6 @@
-  import React from 'react'
-import './sign-up.css'
+import React from 'react'
 import {API_BASE_URL} from '../config'
-export default class SignForm extends React.Component{
+export default class LoginForm extends React.Component{
 constructor(){
   super();
   this.state = {
@@ -24,7 +23,7 @@ submitForm(event){
   console.log(event)
   event.preventDefault();
   
-  return fetch(`${API_BASE_URL}/users`, {
+  return fetch(`${API_BASE_URL}/login`, {
     method: 'POST',
     body:JSON.stringify({
       "username":this.state.username,
