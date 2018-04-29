@@ -1,26 +1,24 @@
 import {API_BASE_URL} from '../config'
 
-export const CREATE_NEW_USER_REQUEST = 'CREATE_NEW_USER_REQUEST'
-export const createNewUser = (user) => ({
-    type:'CREATE_NEW_USER',
-    newUser: user
+
+export const CALCULATE_REQUEST = 'CALCULATE_REQUEST'
+export const calculateUser = (cal) => ({
+  type:'CALCULATE_REQUEST',
+  newCal:cal
 })
 
-export const CREATE_NEW_USER_SUCCESS = 'CREATE_NEW_USER_SUCCESS'
-export const createNewUserSuccess = () => ({
-    type:'CREATE_NEW_USER_SUCCESS',
- 
+export const CALCULATE_SUCCESS = 'CALCULATE_SUCCESS'
+export const calculateUser = () => ({
+  type:'CALCULATE_SUCCESS',
+})
+export const CALCULATE_ERROR = 'CALCULATE_ERROR'
+export const calculateUser = (error) => dispatch = ({
+  type:'CALCULATE_ERROR',
+  error
 })
 
-
-export const CREATE_NEW_USER_ERROR= 'CREATE_NEW_USER_ERROR'
-export const createNewUserError = (error) => dispatch => ({
-    type:'CREATE_NEW_USER_ERROR',
-    error
-
-})
 export const newUser = user => dispatch => {
-  return fetch(`${API_BASE_URL}/users`, {
+  return fetch(`${API_BASE_URL}/calculator`, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
