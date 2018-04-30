@@ -18,8 +18,6 @@ return (
   <div>
     
 <Header/>
-<SignIn/>
-<Sign/>
 <Cal/>
 </div>
 

@@ -2,6 +2,7 @@ import React from 'react'
 import {API_BASE_URL} from '../config'
 import { connect } from 'react-redux';
 import { login } from '../action/auth'
+import {withRouter} from 'react-router-dom'
 
 
 
@@ -30,7 +31,7 @@ submitForm(event){
   return this.props.dispatch(login(
     this.state.username,
     this.state.password
-  ));
+  )).then(() => this.props.history.push('/home'))
  
 }
 render(){
@@ -62,10 +63,11 @@ render(){
   }
 }
 // this.props.user = state.auth
+
 const mapStateToProps = (state) =>{
   return {
     user:state.auth,
   }
 }
 
-export default connect(mapStateToProps)(LoginForm)
+export default withRouter( connect(mapStateToProps)(LoginForm))

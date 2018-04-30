@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from './Header'
 import {API_BASE_URL} from '../config'
-export default class Food extends React.Component{
+import {connect} from 'react-redux'
+ class Workout extends React.Component{
 constructor(){
   super();
   this.state = {
@@ -75,3 +76,9 @@ render(){
   );
   }
 }
+const mapStateToProps =(state) =>{
+  return {
+    workout:state.workout
+  }
+}
+export default connect(mapStateToProps)(Workout)

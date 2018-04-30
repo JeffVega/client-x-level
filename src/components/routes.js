@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link,Redirect } from "react-router-dom";
 import Login from './Login-in'
 import  Main from './main'
 import Food from './food'
@@ -9,8 +9,9 @@ export default function Pages(){
     <Router>
     <div>
         
-       
-     <Route exact path="/" component={Login} />
+    <Redirect exact from="/" to="/signup" />
+     <Route exact path="/signup" component={Login} />
+     <Route exact path="/home" component={Main} />
      <Route exact path="/workout" component={Workout}/>
      <Route exact path="/food" component={Food}/>      
     </div>
