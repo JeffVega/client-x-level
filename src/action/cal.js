@@ -9,8 +9,9 @@ export const calculateUserRequest = (cal) => ({
 })
 
 export const CALCULATE_SUCCESS = 'CALCULATE_SUCCESS'
-export const calculateUserSucess = () => ({
+export const calculateUserSucess = (calculation) => ({
   type:'CALCULATE_SUCCESS',
+  data:calculation
 })
 export const CALCULATE_ERROR = 'CALCULATE_ERROR'
 export const calculateUserError = (error) => ({
@@ -18,22 +19,15 @@ export const calculateUserError = (error) => ({
   error
 })
 
-export const newCal = state => (state,dispatch) =>{
+export const newCal = body => (dispatch) =>{
   console.log("this is one of our loadToken",loadAuthToken())
     const authToken = loadAuthToken();
-    console.log("this is our state",state)
+    console.log("this is our state",body)
     console.log("Bearer Token here",authToken)
+    console.log("weight HERE:",body.weight)
    fetch(`${API_BASE_URL}/cal`, {
     method: 'POST',
-    body:JSON.stringify({
-      "weight":state.weight,
-      "feet":state.feet,
-      "inches":state.inches,
-      "age":state.age,
-      "sex":state.sex,
-      "percent":state.percent,
-      "level":state.level
-    }),
+    body:JSON.stringify(body),
     headers:{
       "Content-Type": "application/json",
       "Authorization" : `Bearer ${authToken}`

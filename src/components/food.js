@@ -1,5 +1,6 @@
 import React from 'react'
 import {API_BASE_URL} from '../config'
+import Header from './Header'
 export default class Food extends React.Component{
 constructor(){
   super();
@@ -20,6 +21,8 @@ submitForm(event){
 render(){
   console.log('what state is this',this.state)
   return (
+    <div>
+      <Header/>
     <form 
     onSubmit={this.submitForm.bind(this)}
     className="container">
@@ -33,6 +36,7 @@ render(){
     <button type="submit">Add Food</button>
  
   </form>
+  </div>
   );
   }
 }

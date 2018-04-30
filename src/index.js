@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Main from './components/main';
+import Routez from './components/routes';
 import {Provider} from 'react-redux';
 import store from './store';
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Main />
+    <Routez />
   </Provider>
 , document.getElementById('root'));
 registerServiceWorker();

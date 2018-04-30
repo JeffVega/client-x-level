@@ -56,7 +56,10 @@ handleLevelChanged(event){
 
 submitForm(event){
   event.preventDefault(); 
-  this.props.dispatch(newCal(this.props))
+  console.log("OUR STATE",this.state)
+  this.props.dispatch(newCal(
+    this.state
+  ))
 }
 
 render(){
@@ -69,7 +72,6 @@ return (
  className="calform">
   <label>Age</label><br/>
   <input 
-   value={this.state.age}
    onChange={this.handleAgeChanged.bind(this)}
   name="age" 
   type="number" 
@@ -87,20 +89,20 @@ return (
     <br/>
     <label>Weight Input</label><br/>
   <input 
-  value={this.state.weight}
+ 
     onChange={this.handleWeightChanged.bind(this)}
   type="number"
    required min="0" />
     <h4>Height Input</h4>
     <label>Feet Input</label><br/>
   <input 
-    value={this.state.feet}
+   
     onChange={this.handleFeetChanged.bind(this)}
   type="number" 
   required min="0"/><br/>
   <label>Inches Input</label><br/>
   <input
-     value={this.state.inches}
+   
      onChange={this.handleInchesChanged.bind(this)}
    type="number" 
    required min="0"/>
@@ -128,13 +130,23 @@ return (
   <button>Calculate</button>
 
   </form>
+{this.props.calulationData.map((calulation,index) =>(
+<div className="dataOfEn">
+  <p key={index}>Calories:{calulation.calories}</p>
+  <p key={index}>Protein:{calulation.protein}</p>
+  <p key={index}>Fat:{calulation.fat}</p>
+</div>
+))
+}
 </div>
 );
 }
 }
 const mapStateToProps = (state) =>{
+  console.log("THIS IS OUR STATE",state)
   return {
-    cal:state.cal
+    cal:state.cal,
+    calulationData:state.cal.data
   }
 }
 

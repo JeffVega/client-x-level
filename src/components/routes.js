@@ -1,18 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Login from './Login-in'
 import  Main from './main'
 import Food from './food'
-import Workout from './workouts'
+import Workout from './workout'
 export default function Pages(){
   return(
     <Router>
-    <div className="email">
-        <Sidebar />
-        <main>
-            <Switch>
-                <Route exact path="/" component={Food} />
-            </Switch>
-        </main>
+    <div>
+        
+       
+     <Route exact path="/" component={Login} />
+     <Route exact path="/workout" component={Workout}/>
+     <Route exact path="/food" component={Food}/>      
     </div>
+    </Router>
   )
 };
