@@ -1,6 +1,11 @@
 import React from 'react'
 import {API_BASE_URL} from '../config'
-export default class LoginForm extends React.Component{
+import { connect } from 'react-redux';
+import { login } from '../action/auth'
+
+
+
+ class LoginForm extends React.Component{
 constructor(){
   super();
   this.state = {
@@ -22,24 +27,14 @@ handlePasswordChanged(event){
 submitForm(event){
   console.log(event)
   event.preventDefault();
-  
-  return fetch(`${API_BASE_URL}/login`, {
-    method: 'POST',
-    body:JSON.stringify({
-      "username":this.state.username,
-      "password":this.state.password
-    }),
-    headers:{
-      "Content-Type": "application/json"
-    }
-})        
-    .then(response => response.json())
-    .catch(err => {
-        console.log(err)
-    })
+  return this.props.dispatch(login(
+    this.state.username,
+    this.state.password
+  ));
+ 
 }
 render(){
-  console.log('what state is this',this.state)
+  console.log('this is my login',this.state)
   return (
     <form 
     onSubmit={this.submitForm.bind(this)}
@@ -60,9 +55,17 @@ render(){
       name="psw" 
       required/>
       
-    <button type="submit">Sign Up</button>
+    <button type="submit">Sign In</button>
  
   </form>
   );
   }
 }
+// this.props.user = state.auth
+const mapStateToProps = (state) =>{
+  return {
+    user:state.auth,
+  }
+}
+
+export default connect(mapStateToProps)(LoginForm)

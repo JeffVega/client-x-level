@@ -1,6 +1,9 @@
 import React from 'react'
 import './cal.css'
-export default class Cal extends React.Component{
+import {connect} from 'react-redux'
+import {bindActionCreators} from 'redux'
+import {newCal} from '../action/cal'
+ class Cal extends React.Component{
 constructor(props){
   super(props)
 
@@ -10,61 +13,118 @@ constructor(props){
     inches:undefined,
     age:undefined,
     sex:undefined,
-    Actitiy:undefined
+    percent:undefined,
+    level:undefined
 
   }
 }
-//   For men:	BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) + 5
-// 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) + 5 = REE
-// For women:	BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age(y) - 161
-// 10 x weight (kg) + 6.25 x height (cm) – 5 x age (y) – 161 = REE
-//---------------------------------------------------------------------------------------------------
-// Sedentary
-// Just normal everyday activity like a little walking, a couple flights of stairs, eating, talking etc. (REE X 1.2)
-// Light activity
-// Any activity that burns an additional 200-400 calories for females or 250-500 calories for males more than your sedentary amount. (REE x 1.375)
-// Moderate activity
-// Any activity that burns an additional 400-650 calories for females or 500-800 calories for males more than your sedentary amount. (REE x 1.55)
-// Very Active
-// Any activity that burns more than about 650 calories for females or more than 800 calories for males in addition to your sedentary amount. (REE x 1.725)
-//----------------------------------------------------------------------------------------------------
-
-calculateHeightToCm(feet,inches){
-  let cm = (feet * 12) + inches ;
-  let newCm = cm * 2.54;
-  return Math.round(newCm)
+handleWeightChanged(event){
+  this.setState({
+    weight:event.target.value
+  })
 }
+handleFeetChanged(event){
+  this.setState({
+    feet:event.target.value
+  })
+}
+handleInchesChanged(event){
+  this.setState({
+    inches:event.target.value
+  })
+}
+handleAgeChanged(event){
+  this.setState({
+    age:event.target.value
+  })
+}
+handleSexChanged(event){
+  this.setState({
+    sex:event.target.value
+  })
+}
+handlePercentChanged(event){
+  this.setState({
+    percent:event.target.value
+  })
+}
+handleLevelChanged(event){
+  this.setState({
+    level:event.target.value
+  })
+}
+
+submitForm(event){
+  event.preventDefault(); 
+  this.props.dispatch(newCal(this.props))
+}
+
 render(){
+  console.log('is my info working',this.state)
 return (
 <div>
 <h1 className="bannerform">CALCULATE YOUR TOTAL DAILY ENERGY EXPENDITURE</h1>
-<form className="calform">
+<form
+  onSubmit={this.submitForm.bind(this)}
+ className="calform">
   <label>Age</label><br/>
-  <input type="number" min="0" max="120"/>
+  <input 
+   value={this.state.age}
+   onChange={this.handleAgeChanged.bind(this)}
+  name="age" 
+  type="number" 
+  min="0"
+   max="120"/>
   <br/>
     <label>I'm A</label><br/>
-    <input type="radio" name="radio"/>
-    <label>Male</label>
-    <input type="radio"  name="radio"/>
-    <label>Female</label>
+    <select
+   value={this.state.sex}
+   onChange={this.handleSexChanged.bind(this)}>
+   <option/>
+  <option value="male">male</option>
+  <option value="female">female</option>
+  </select>
     <br/>
     <label>Weight Input</label><br/>
-  <input type="number" required min="0" />
+  <input 
+  value={this.state.weight}
+    onChange={this.handleWeightChanged.bind(this)}
+  type="number"
+   required min="0" />
     <h4>Height Input</h4>
     <label>Feet Input</label><br/>
-  <input type="number" required min="0"/><br/>
+  <input 
+    value={this.state.feet}
+    onChange={this.handleFeetChanged.bind(this)}
+  type="number" 
+  required min="0"/><br/>
   <label>Inches Input</label><br/>
-  <input type="number" required min="0"/>
+  <input
+     value={this.state.inches}
+     onChange={this.handleInchesChanged.bind(this)}
+   type="number" 
+   required min="0"/>
   <br/><br/>
   <label>Actitiy Level</label>
   <br/>
-  <select>
-  <option value="sed">Sedentary</option>
-  <option value="light">Light</option>
-  <option value="modern">Moderate</option>
-  <option value="extr">Extreme</option>
+  <select
+   value={this.state.level}
+   onChange={this.handleLevelChanged.bind(this)}>
+   <option/>
+  <option value="1">Sedentary</option>
+  <option value="2">Light</option>
+  <option value="3">Moderate</option>
+  <option value="4">Extreme</option>
 </select>
   <br/><br/>
+  <select 
+   value={this.state.percent}
+   onChange={this.handlePercentChanged.bind(this)}>
+   <option/>
+  <option value="1">10% Lose</option>
+  <option value="2">20% Lose</option>
+</select>
+<br/><br/>
   <button>Calculate</button>
 
   </form>
@@ -72,3 +132,10 @@ return (
 );
 }
 }
+const mapStateToProps = (state) =>{
+  return {
+    cal:state.cal
+  }
+}
+
+export default connect(mapStateToProps)(Cal)

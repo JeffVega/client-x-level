@@ -3,9 +3,10 @@ import React,{Component} from 'react'
 import Header from './Header'
 import Sign from './sign-form'
 import Cal from './cal'
+import SignIn from './sign-in'
 export default class Main extends Component{
-constructor(props){
-  super(props)
+constructor(){
+  super()
 
 }
 
@@ -14,6 +15,7 @@ return (
   <div>
     
 <Header/>
+<SignIn/>
 <Sign/>
 <Cal/>
 </div>
