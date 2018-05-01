@@ -91,7 +91,7 @@ export const newFoods = user => dispatch => {
       .then(res => res.json())
           .then(response=> {
             console.log("this is our res ",response)
-          return dispatch(createFoodRequest(response));
+          return dispatch(createFoodSuccess(response));
       })
       .catch(err => {
           dispatch(createFoodError(err))

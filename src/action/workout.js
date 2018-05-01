@@ -11,7 +11,7 @@ export const createWorkoutRequest = (workout) => ({
 export const CREATE_WORKOUT_SUCCESS = 'CREATE_WORKOUT_SUCCESS'
 export const createWorkoutSuccess = (workout) => ({
     type:'CREATE_WORKOUT_SUCCESS',
-    workouts: workout
+    newWorkout: workout
 })
 
 export const CREATE_WORKOUT_ERROR = 'CREATE_WORKOUT_ERROR'
@@ -91,7 +91,7 @@ export const newWorkout = works => dispatch => {
       .then(res => res.json())
           .then(response=> {
               console.log("this is our res ",response)
-          return dispatch(createWorkoutRequest(response));
+          return dispatch(createWorkoutSuccess(response));
       })
       .catch(err => {
           dispatch(createWorkoutError(err))

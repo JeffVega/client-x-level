@@ -2,7 +2,28 @@
   border: 3px solid black;
   background:white;
   text-align: center;
-  border-bottom: 2px solid brown;
+  border-bottom: 5px solid #AD712F;
   padding-bottom: 2em;
-  background: lightgreen;
+  background: #61C9A8;
+  -webkit-animation: myfirst 1.5s infinite; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+  animation: myfirst 1.5s infinite;
+  animation-direction: alternate;
+}
+
+
+@-webkit-keyframes myfirst {
+  0%   {background: red; left: 0px; top: 0px;}
+  25%  {background: white; left: 200px; top: 0px;}
+  50%  {background: blue; left: 200px; top: 200px;}
+  75%  {background: red; left: 0px; top: 200px;}
+  100% {background: white; left: 0px; top: 0px;}
+}
+
+@keyframes myfirst {
+  0%   {background: red; left: 0px; top: 0px;}
+  25%  {background: white; left: 200px; top: 0px;}
+  50%  {background: blue; left: 200px; top: 200px;}
+  75%  {background: red; left: 0px; top: 200px;}
+  100% {background: white; left: 0px; top: 0px;}
 }

@@ -24,7 +24,7 @@ import{
   export const workoutReducer = (state = initialState, action) => {
       if(action.type === CREATE_WORKOUT_SUCCESS) {
           return Object.assign({}, state, {
-              workouts: [...state.workouts, action.workouts]
+              workouts: [...state.workouts, action.newWorkout]
           })
       }
       else if(action.type === CREATE_WORKOUT_REQUEST) {

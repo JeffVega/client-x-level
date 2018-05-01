@@ -24,7 +24,7 @@ import{
   export const foodReducer = (state = initialState, action) => {
       if(action.type === CREATE_FOOD_SUCCESS) {
           return Object.assign({}, state, {
-              foods: [...state.foods, action.food]
+              foods: [...state.foods, action.newFood]
           })
       }
       else if(action.type === CREATE_FOOD_REQUEST) {

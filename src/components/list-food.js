@@ -3,22 +3,18 @@ import {connect} from 'react-redux'
 import { getFoods } from '../action/food';
 import './list-workout.css'
  class ListFood extends React.Component{
-
-  componentWillMount(){
+ 
+  componentDidMount(){
    this.props.dispatch(getFoods())
   }
-render(){
-  console.log("workout props here:",this.props)
-  {this.props.foodOutput.map((foods,index)=>(
-     <div>
- <p key={index}>food:{foods.food}</p>
-</div>
-  ))}
- 
+
   
+render(){
+
+  
+
 return (
  <div>
-    console.log("workout props here:",this.props)
   {this.props.foodOutput.map((foods,index)=>(
      <div>
  <p key={index}>food:{foods.food}</p>
@@ -28,11 +24,11 @@ return (
    </div>
 );
 }
- }
+}
 const mapStateToProps =(state) =>{
   return {
     food:state.food,
   foodOutput:state.food.foods
   }
 }
-export default connect(mapStateToProps)(ListWorkouts)
+export default connect(mapStateToProps)(ListFood)

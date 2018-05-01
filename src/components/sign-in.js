@@ -41,23 +41,27 @@ render(){
     onSubmit={this.submitForm.bind(this)}
     className="container">
     <label htmlFor="uname"><b>Username</b></label>
+    <br/>
     <input type="text"    
     value={this.state.username}
     onChange={this.handleUsernameChanged.bind(this)}
      placeholder="Enter Username"
       name="uname" 
       required/>
-
+    <br/><br/>
     <label htmlFor="psw"><b>Password</b></label>
+    <br/>
     <input type="password"
     value={this.state.password}
     onChange={this.handlePasswordChanged.bind(this)}
      placeholder="Enter Password"
       name="psw" 
       required/>
-      
-    <button type="submit">Sign In</button>
- 
+      <br/><br/>
+    <button 
+    className="button-sign"
+    type="submit">Sign In</button>
+    <br/><br/>
   </form>
   );
   }

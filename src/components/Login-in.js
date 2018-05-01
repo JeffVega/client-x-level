@@ -4,9 +4,12 @@ import SignUp from './sign-form'
 export default class LoginPage extends React.Component{
   render(){
     return(
-      <div>
+      <div >
+      <h1 role="banner" className="banner">X-LEVEL</h1>
+      <div className="sign-up">
       <LoginIn/>
       <SignUp/>
+      </div>
       </div>
     )
   }
