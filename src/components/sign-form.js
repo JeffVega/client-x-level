@@ -45,6 +45,8 @@ render(){
     <form 
     onSubmit={this.submitForm.bind(this)}
     className="container">
+    <h3> Sign Up </h3>
+    <br/>
     <label htmlFor="uname"><b>Username</b></label>
     <br/>
     <input type="text"    

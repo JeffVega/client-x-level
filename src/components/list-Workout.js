@@ -15,12 +15,10 @@ return (
  <div >
     {this.props.workoutOutput.map((workouts,index)=>(
     <div key={index} className="workout-happens">
-    <ul>
-<li >title:{workouts.title}</li>
-  <li >muscle:{workouts.muscle}</li>
-  <li >weight:{workouts.weight}</li>
-  </ul>
-
+    
+<p >TITLE:{workouts.title}</p>
+  <p>MUSCLE:{workouts.muscle}</p>
+  <p>WEIGHT:{workouts.weight}</p>
 </div>
   ))}
 

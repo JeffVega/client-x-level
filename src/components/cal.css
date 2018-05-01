@@ -5,10 +5,24 @@
 
 .bannerform{
   text-align: center;
-  padding-left: 5em;
+border: 2px solid #EBF5EE;
+display: block;
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+background: #DCF2B0
 }
 .dataOfEn{
   text-align: center;
   font-size: 30px;
   color:white;
+}
+.cal-form{
+  border: 0.5em solid #BFD1E5;
+  background: #DCF2B0;
+  display: block;
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 2em;
 }

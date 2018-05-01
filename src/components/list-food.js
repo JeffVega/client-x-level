@@ -16,8 +16,10 @@ render(){
 return (
  <div>
   {this.props.foodOutput.map((foods,index)=>(
-     <div>
- <p key={index}>food:{foods.food}</p>
+     <div key={index} className="workout-happens">
+      
+ <p>Food:{foods.food}</p>
+     
 </div>
   ))}
 

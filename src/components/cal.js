@@ -67,6 +67,7 @@ render(){
 return (
 <div>
 <h1 className="bannerform">CALCULATE YOUR TOTAL DAILY ENERGY EXPENDITURE</h1>
+<div className="cal-form">
 <form
   onSubmit={this.submitForm.bind(this)}
  className="calform">
@@ -78,13 +79,13 @@ return (
   min="0"
    max="120"/>
   <br/>
-    <label>I'm A</label><br/>
+    <label>Sex</label><br/>
     <select
    value={this.state.sex}
    onChange={this.handleSexChanged.bind(this)}>
    <option/>
-  <option value="male">male</option>
-  <option value="female">female</option>
+  <option value="male">MALE</option>
+  <option value="female">FEMALE</option>
   </select>
     <br/>
     <label>Weight Input</label><br/>
@@ -127,9 +128,12 @@ return (
   <option value="2">20% Lose</option>
 </select>
 <br/><br/>
-  <button>Calculate</button>
+  <button
+  className="button-cal"
+  >Calculate</button>
 
   </form>
+  </div>
 {this.props.calulationData.map((calulation,index) =>(
 <div className="dataOfEn">
   <p key={index}>Calories:{calulation.calories}</p>

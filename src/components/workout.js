@@ -12,8 +12,7 @@ constructor(){
   this.state = {
     title:"",
     muscle:"",
-    weight:"",
-    content:""
+    weight:""
   }
 }
 handleTitleChanged(event){
@@ -31,11 +30,7 @@ handleWeightChanged(event){
     weight:event.target.value
   })
 }
-handleContentChanged(event){
-  this.setState({
-    content:event.target.value
-  })
-}
+
 
 submitForm(event){
   event.preventDefault();
@@ -52,7 +47,7 @@ render(){
     <form 
     onSubmit={this.submitForm.bind(this)}
     className="workoutForm">
-    <label htmlFor="title"><b>Title</b></label>
+
     <input type="text"    
     value={this.state.title}
     onChange={this.handleTitleChanged.bind(this)}
@@ -70,13 +65,7 @@ render(){
     onChange={this.handleWeightChanged.bind(this)}
      placeholder="Enter Weight"
       name="food" 
-      required/>  
-          <input type="textarea"    
-    value={this.state.content}
-    onChange={this.handleContentChanged.bind(this)}
-     placeholder="Notes..."
-      name="food" 
-      />      
+      required/>     
     <button type="submit">Add Workout</button>
  
   </form>
