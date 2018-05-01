@@ -20,13 +20,14 @@ render(){
   ))}
   
 return (
- <div className="workout-happens">
+ <div >
     {this.props.workoutOutput.map((workouts,index)=>(
-    <div>
-<p key={index}>title:{workouts.title}</p>
-  <p key={index}>muscle:{workouts.muscle}</p>
-  <p key={index}>weight:{workouts.weight}</p>
-  
+    <div className="workout-happens">
+    <ul>
+<li key={index}>title:{workouts.title}</li>
+  <li key={index}>muscle:{workouts.muscle}</li>
+  <li key={index}>weight:{workouts.weight}</li>
+  </ul>
 
 </div>
   ))}

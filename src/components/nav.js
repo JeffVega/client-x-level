@@ -7,7 +7,7 @@ return (
 <div>
 <nav>
 <ul className="nav">
-<Link to="/home">
+<Link to="/cal">
   <li>Home</li>
   </Link>
   <Link to="/food">

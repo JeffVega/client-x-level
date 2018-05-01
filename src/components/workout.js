@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 import { workoutReducer } from '../reducer/workouts';
 import { newWorkout } from '../action/workout';
 import ListWorkout from './list-Workout'
+import './workout.css'
  class Workout extends React.Component{
 constructor(){
   super();
@@ -50,7 +51,7 @@ render(){
     <Header/>
     <form 
     onSubmit={this.submitForm.bind(this)}
-    className="container">
+    className="workoutForm">
     <label htmlFor="title"><b>Title</b></label>
     <input type="text"    
     value={this.state.title}
@@ -79,6 +80,7 @@ render(){
     <button type="submit">Add Workout</button>
  
   </form>
+  <br/><br/><br/><br/>
   <ListWorkout/>
   </div>
   );

@@ -1,7 +1,9 @@
 import React from 'react'
 import {API_BASE_URL} from '../config'
 import Header from './Header'
-export default class Food extends React.Component{
+import {connect} from 'react-redux'
+import {newFoods} from '../action/food'
+ class Food extends React.Component{
 constructor(){
   super();
   this.state = {
@@ -17,6 +19,9 @@ handleFoodChanged(event){
 submitForm(event){
   console.log(event)
   event.preventDefault();
+  this.props.dispatch(newFoods(
+    this.state
+  ))
 }
 render(){
   console.log('what state is this',this.state)
@@ -40,3 +45,9 @@ render(){
   );
   }
 }
+const mapStateToProps =(state) =>{
+  return {
+    food:state.food
+  }
+}
+export default connect(mapStateToProps)(Food)

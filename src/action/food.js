@@ -90,8 +90,7 @@ export const newFoods = user => dispatch => {
   })
       .then(res => res.json())
           .then(response=> {
-          const id = response.id;
-          window.location = `/food/${id}`;
+            console.log("this is our res ",response)
           return dispatch(createFoodRequest(response));
       })
       .catch(err => {

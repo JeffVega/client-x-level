@@ -16,6 +16,7 @@ export default function Pages(){
      <Route exact path="/workout" component={Workout}/>
      <Route exact path="/workout/:id" component={Workout}/>
      <Route exact path="/food" component={Food}/>
+     <Route exact path="/food/id" component={Food}/>
      </Switch>      
     </div>
     </Router>
