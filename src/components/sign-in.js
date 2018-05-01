@@ -31,7 +31,7 @@ submitForm(event){
   return this.props.dispatch(login(
     this.state.username,
     this.state.password
-  )).then(() => this.props.history.push('/home'))
+  )).then(() => this.props.history.push('/cal'))
  
 }
 render(){

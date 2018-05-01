@@ -11,10 +11,10 @@ return (
   <li>Home</li>
   </Link>
   <Link to="/food">
-  <a href="#"><li>Food</li></a>
+  <li>Food</li>
   </Link>
   <Link to="/workout">
-  <a ><li>Workouts</li></a>
+ <li>Workouts</li>
   </Link>
   </ul>
 </nav>

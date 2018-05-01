@@ -2,6 +2,9 @@ import React from 'react'
 import Header from './Header'
 import {API_BASE_URL} from '../config'
 import {connect} from 'react-redux'
+import { workoutReducer } from '../reducer/workouts';
+import { newWorkout } from '../action/workout';
+import ListWorkout from './list-Workout'
  class Workout extends React.Component{
 constructor(){
   super();
@@ -34,8 +37,12 @@ handleContentChanged(event){
 }
 
 submitForm(event){
-  console.log(event)
   event.preventDefault();
+  console.log('OUR WORKOUT STATE',this.state)
+  console.log(event)
+  this.props.dispatch(newWorkout(
+    this.state
+  ))
 }
 render(){
   console.log('what state is this',this.state)
@@ -72,6 +79,7 @@ render(){
     <button type="submit">Add Workout</button>
  
   </form>
+  <ListWorkout/>
   </div>
   );
   }

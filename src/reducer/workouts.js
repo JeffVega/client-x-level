@@ -16,7 +16,7 @@ import{
   
   const initialState = {
       workouts: [],
-      currentWORKOUT: null,
+      currentWorkout: null,
       loading: false,
       error: null
   }
@@ -24,7 +24,7 @@ import{
   export const workoutReducer = (state = initialState, action) => {
       if(action.type === CREATE_WORKOUT_SUCCESS) {
           return Object.assign({}, state, {
-              workouts: [...state.workouts, action.workout]
+              workouts: [...state.workouts, action.workouts]
           })
       }
       else if(action.type === CREATE_WORKOUT_REQUEST) {
@@ -45,7 +45,7 @@ import{
       }
       else if(action.type === GET_WORKOUT_SUCCESS){
           return Object.assign({}, state,{
-              currentWorkout: action.workout,
+              currentWorkout: action.workouts,
               loading: false
          }) 
       }   
@@ -79,7 +79,7 @@ import{
       }
       else if(action.type === UPDATE_WORKOUT_SUCCESS){
           return Object.assign({}, state,{
-              WORKOUTs: action.workouts,
+            workouts: action.workouts,
               loading: false
          }) 
       }   
@@ -88,7 +88,8 @@ import{
               loading: false,
               error: action.error
           })
-      }   
+      }
+      else{   
       return state
-  
+      }
   }

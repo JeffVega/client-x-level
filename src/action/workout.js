@@ -11,7 +11,7 @@ export const createWorkoutRequest = (workout) => ({
 export const CREATE_WORKOUT_SUCCESS = 'CREATE_WORKOUT_SUCCESS'
 export const createWorkoutSuccess = (workout) => ({
     type:'CREATE_WORKOUT_SUCCESS',
-    newWorkout: workout
+    workouts: workout
 })
 
 export const CREATE_WORKOUT_ERROR = 'CREATE_WORKOUT_ERROR'
@@ -30,7 +30,7 @@ export const getWorkoutRequest = () => ({
 export const GET_WORKOUT_SUCCESS = 'GET_WORKOUT_SUCCESS'
 export const getWorkoutSuccess = (workout) => ({
     type:'GET_WORKOUT_SUCCESS',
-    WORKOUT: workout
+    workouts: workout
 })
 
 
@@ -77,7 +77,7 @@ export const updateWorkoutError = (error) => ({
     type:'UPDATE_WORKOUT_ERROR',
     error
 })
-export const newWORKOUTs = user => dispatch => {
+export const newWorkout = works => dispatch => {
   const authToken = loadAuthToken();
   return fetch(`${API_BASE_URL}/workout`, {
       method: 'POST',
@@ -85,13 +85,12 @@ export const newWORKOUTs = user => dispatch => {
           'Content-Type': 'application/json',
           'Authorization' : `Bearer ${authToken}`
       },
-      body: JSON.stringify(user)
+      body: JSON.stringify(works)
   
   })
       .then(res => res.json())
           .then(response=> {
-          const id = response.id;
-          window.location = `/workout/${id}`;
+              console.log("this is our res ",response)
           return dispatch(createWorkoutRequest(response));
       })
       .catch(err => {

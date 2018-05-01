@@ -39,3 +39,8 @@ export const newCal = body => (dispatch) =>{
         console.log(err)
     })
 }
+// const calculations = response.calculations.map((calculation)=>{
+//   return {
+//     calories:calculation.calories
+//   }
+// })
