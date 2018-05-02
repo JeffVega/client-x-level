@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { getFoods } from '../action/Action_food';
-import './list-workout.css'
+// import './list-workout.css'
  class ListFood extends React.Component{
  
   componentDidMount(){

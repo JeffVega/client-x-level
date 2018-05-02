@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { getWorkouts } from '../action/Action_workout';
-import './list-workout.css'
+import { getWorkouts } from '../../action/Action_workout';
+import './style/list-workout.css'
  class ListWorkouts extends React.Component{
 
   componentDidMount(){

@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from './Header'
+import Header from '../Header'
 import {connect} from 'react-redux'
-import { newWorkout } from '../action/Action_workout';
+import { newWorkout } from '../../action/Action_workout';
 import ListWorkout from './list-Workout'
-import './workout.css'
+import './style/workout.css'
  class Workout extends React.Component{
 constructor(){
   super();

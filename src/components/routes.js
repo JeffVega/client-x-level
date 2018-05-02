@@ -4,7 +4,7 @@ import Login from './Login-in';
 import Signup from './sign-up';
 import  Main from './main';
 import Food from './food';
-import Workout from './workout';
+import Workout from './Workout/workout';
 
 export default function Pages(){
   return(
