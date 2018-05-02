@@ -1,8 +1,7 @@
 import React from 'react'
-import {API_BASE_URL} from '../config'
 import Header from './Header'
 import {connect} from 'react-redux'
-import {newFoods} from '../action/food'
+import {newFoods} from '../action/Action_food'
 import  FoodList from '../components/list-food'
  class Food extends React.Component{
 constructor(){

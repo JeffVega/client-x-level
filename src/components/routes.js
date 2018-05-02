@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link,Redirect,Switch } from "react-router-dom";
-import Login from './Login-in'
-import Signup from './sign-up'
-import  Main from './main'
-import Food from './food'
-import Workout from './workout'
-import workout from "./workout";
+import { BrowserRouter as Router, Route,Redirect,Switch } from "react-router-dom";
+import Login from './Login-in';
+import Signup from './sign-up';
+import  Main from './main';
+import Food from './food';
+import Workout from './workout';
+
 export default function Pages(){
   return(
     <Router>

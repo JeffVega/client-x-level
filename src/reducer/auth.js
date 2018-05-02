@@ -1,7 +1,7 @@
 
 
 import { SET_AUTH_TOKEN, CLEAR_AUTH, AUTH_REQUEST, AUTH_SUCCESS, AUTH_ERROR} 
-from '../action/auth'
+from '../action/Action_auth'
 
 
 

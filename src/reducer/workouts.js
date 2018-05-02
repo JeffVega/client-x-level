@@ -11,7 +11,7 @@ import{
   UPDATE_WORKOUT_REQUEST,
   UPDATE_WORKOUT_SUCCESS,
   UPDATE_WORKOUT_ERROR
-  } from '../action/workout';
+  } from '../action/Action_workout';
   
   
   const initialState = {

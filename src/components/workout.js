@@ -1,9 +1,7 @@
 import React from 'react'
 import Header from './Header'
-import {API_BASE_URL} from '../config'
 import {connect} from 'react-redux'
-import { workoutReducer } from '../reducer/workouts';
-import { newWorkout } from '../action/workout';
+import { newWorkout } from '../action/Action_workout';
 import ListWorkout from './list-Workout'
 import './workout.css'
  class Workout extends React.Component{

@@ -11,7 +11,7 @@ import{
   UPDATE_FOOD_REQUEST,
   UPDATE_FOOD_SUCCESS,
   UPDATE_FOOD_ERROR
-  } from '../action/food';
+  } from '../action/Action_food';
   
   
   const initialState = {

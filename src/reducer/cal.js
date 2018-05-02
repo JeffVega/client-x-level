@@ -2,7 +2,7 @@ import {CALCULATE_REQUEST,
   CALCULATE_SUCCESS,
   CALCULATE_ERROR
 }
-from '../action/cal'
+from '../action/Action_cal'
 
 const initialState = {
   data:[],

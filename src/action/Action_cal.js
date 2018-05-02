@@ -1,6 +1,5 @@
 import {API_BASE_URL} from '../config';
 import { loadAuthToken } from '../local-storage';
-import {store} from '../store'
 
 export const CALCULATE_REQUEST = 'CALCULATE_REQUEST'
 export const calculateUserRequest = (cal) => ({

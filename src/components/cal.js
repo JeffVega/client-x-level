@@ -1,8 +1,7 @@
 import React from 'react'
 import './cal.css'
 import {connect} from 'react-redux'
-import {bindActionCreators} from 'redux'
-import {newCal} from '../action/cal'
+import {newCal} from '../action/Action_cal'
  class Cal extends React.Component{
 constructor(props){
   super(props)

@@ -1,6 +1,5 @@
 import React from 'react'
 import LoginIn from './sign-in'
-import SignUp from './sign-form'
 import {Link} from 'react-router-dom'
 export default class LoginPage extends React.Component{
   

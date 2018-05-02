@@ -1,7 +1,6 @@
 import React from 'react'
-import {API_BASE_URL} from '../config'
 import { connect } from 'react-redux';
-import { login } from '../action/auth'
+import { login } from '../action/Action_auth'
 import {withRouter} from 'react-router-dom'
 
 
