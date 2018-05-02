@@ -1,6 +1,6 @@
 import React from 'react'
 import './nav.css'
-import {clearAuthToken} from '../local-storage'
+import {clearAuthToken} from '../../local-storage'
 import {Link} from 'react-router-dom'
 export default function nav(){
 

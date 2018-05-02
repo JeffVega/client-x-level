@@ -1,8 +1,8 @@
 import React from 'react'
-import Header from './Header'
+import Header from '../Header/Header'
 import {connect} from 'react-redux'
-import {newFoods} from '../action/Action_food'
-import  FoodList from '../components/list-food'
+import {newFoods} from '../../action/Action_food'
+import  FoodList from './list-food'
  class Food extends React.Component{
 constructor(){
   super();

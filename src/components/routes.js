@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route,Redirect,Switch } from "react-router-dom
 import Login from './Login-in';
 import Signup from './sign-up';
 import  Main from './main';
-import Food from './food';
+import Food from './Food/food';
 import Workout from './Workout/workout';
 
 export default function Pages(){

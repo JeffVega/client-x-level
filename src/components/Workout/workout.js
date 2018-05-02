@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Header'
+import Header from '../Header/Header'
 import {connect} from 'react-redux'
 import { newWorkout } from '../../action/Action_workout';
 import ListWorkout from './list-Workout'
