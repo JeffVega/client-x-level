@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link,Redirect,Switch } from "react-router-dom";
 import Login from './Login-in'
+import Signup from './sign-up'
 import  Main from './main'
 import Food from './food'
 import Workout from './workout'
@@ -10,8 +11,9 @@ export default function Pages(){
     <Router>
     <div>
     <Switch> 
-    <Redirect exact from="/" to="/signup" />
-     <Route exact path="/signup" component={Login} />
+    <Redirect exact from="/" to="/signin" />
+     <Route exact path="/signin" component={Login} />
+     <Route exact path="/signup" component={Signup} />
      <Route exact path="/cal" component={Main} />
      <Route exact path="/workout" component={Workout}/>
      <Route exact path="/workout/:id" component={Workout}/>
