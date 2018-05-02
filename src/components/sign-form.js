@@ -38,6 +38,8 @@ submitForm(event){
     .catch(err => {
         console.log(err)
     })
+    event.target.username.value = ""
+    event.target.password.value = ""
 }
 render(){
   console.log('what state is this',this.state)
@@ -50,16 +52,15 @@ render(){
     <label htmlFor="uname"><b>Username</b></label>
     <br/>
     <input type="text"    
-    value={this.state.username}
+    name="username"
     onChange={this.handleUsernameChanged.bind(this)}
      placeholder="Enter Username"
-      name="uname" 
+     
       required/>
     <br/><br/>
     <label htmlFor="psw"><b>Password</b></label>
     <br/>
     <input type="password"
-    value={this.state.password}
     onChange={this.handlePasswordChanged.bind(this)}
      placeholder="Enter Password"
       name="psw" 

@@ -37,6 +37,9 @@ submitForm(event){
   this.props.dispatch(newWorkout(
     this.state
   ))
+  event.target.title.value =""
+  event.target.muscle.value =""
+  event.target.weight.value =""
 }
 render(){
   console.log('what state is this',this.state)
@@ -47,22 +50,19 @@ render(){
     className="workoutForm">
 
     <input type="text"    
-    value={this.state.title}
     onChange={this.handleTitleChanged.bind(this)}
      placeholder="Title.."
-      name="food" 
+      name="title" 
       required/>
           <input type="text"    
-    value={this.state.muscle}
     onChange={this.handleMuscleChanged.bind(this)}
      placeholder="Muscle"
       name="muscle" 
       required/>  
           <input type="text"    
-    value={this.state.weight}
     onChange={this.handleWeightChanged.bind(this)}
      placeholder="Enter Weight"
-      name="food" 
+      name="weight" 
       required/>
       <br/>     
     <button 

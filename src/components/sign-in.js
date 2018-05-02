@@ -31,7 +31,8 @@ submitForm(event){
     this.state.username,
     this.state.password
   )).then(() => this.props.history.push('/cal'))
- 
+  event.target.uname.value = ""
+  event.target.psw.value = ""
 }
 render(){
   console.log('this is my login',this.state)
@@ -44,7 +45,6 @@ render(){
     <label htmlFor="uname"><b>Username</b></label>
     <br/>
     <input type="text"    
-    value={this.state.username}
     onChange={this.handleUsernameChanged.bind(this)}
      placeholder="Enter Username"
       name="uname" 
@@ -53,7 +53,6 @@ render(){
     <label htmlFor="psw"><b>Password</b></label>
     <br/>
     <input type="password"
-    value={this.state.password}
     onChange={this.handlePasswordChanged.bind(this)}
      placeholder="Enter Password"
       name="psw" 

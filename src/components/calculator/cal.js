@@ -56,9 +56,17 @@ handleLevelChanged(event){
 submitForm(event){
   event.preventDefault(); 
   console.log("OUR STATE",this.state)
+  console.log(event.target.sex.value)
   this.props.dispatch(newCal(
     this.state
   ))
+  event.target.age.value =""
+  event.target.sex.value =""
+  event.target.weight.value =""
+  event.target.feet.value =""
+  event.target.inches.value =""
+  event.target.level.value =""
+  event.target.percent.value =""
 }
 
 render(){
@@ -80,7 +88,7 @@ return (
   <br/>
     <label>Sex</label><br/>
     <select
-   value={this.state.sex}
+   name="sex"
    onChange={this.handleSexChanged.bind(this)}>
    <option/>
   <option value="male">MALE</option>
@@ -89,7 +97,7 @@ return (
     <br/>
     <label>Weight Input</label><br/>
   <input 
- 
+  name="weight"
     onChange={this.handleWeightChanged.bind(this)}
   type="number"
    required min="0" />
@@ -98,11 +106,12 @@ return (
   <input 
    
     onChange={this.handleFeetChanged.bind(this)}
+    name="feet"
   type="number" 
   required min="0"/><br/>
   <label>Inches Input</label><br/>
   <input
-   
+      name="inches"
      onChange={this.handleInchesChanged.bind(this)}
    type="number" 
    required min="0"/>
@@ -110,7 +119,7 @@ return (
   <label>Actitiy Level</label>
   <br/>
   <select
-   value={this.state.level}
+   name="level"
    onChange={this.handleLevelChanged.bind(this)}>
    <option/>
   <option value="1">Sedentary</option>
@@ -120,7 +129,7 @@ return (
 </select>
   <br/><br/>
   <select 
-   value={this.state.percent}
+   name="percent"
    onChange={this.handlePercentChanged.bind(this)}>
    <option/>
   <option value="1">10% Lose</option>
@@ -134,10 +143,10 @@ return (
   </form>
   </div>
 {this.props.calulationData.map((calulation,index) =>(
-<div className="dataOfEn">
-  <p key={index}>Calories:{calulation.calories}</p>
-  <p key={index}>Protein:{calulation.protein}</p>
-  <p key={index}>Fat:{calulation.fat}</p>
+<div key={index} className="dataOfEn">
+  <p >Calories:{calulation.calories}</p>
+  <p >Protein:{calulation.protein}</p>
+  <p >Fat:{calulation.fat}</p>
 </div>
 ))
 }

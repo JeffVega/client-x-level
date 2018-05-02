@@ -22,19 +22,19 @@ submitForm(event){
   this.props.dispatch(newFoods(
     this.state
   ))
+  event.target.food.value =""
 }
 render(){
   console.log('what state is this',this.state)
   return (
     <div>
       <Header/>
-    <form 
+    <form       
     onSubmit={this.submitForm.bind(this)}
     className="container">
     <label htmlFor="food"><b>Food</b></label>
     <br/><br/>
-    <input type="text"    
-    value={this.state.food}
+    <input type="text"
     onChange={this.handleFoodChanged.bind(this)}
      placeholder="Apple...etc"
       name="food" 
