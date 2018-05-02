@@ -67,6 +67,7 @@ submitForm(event){
   event.target.inches.value =""
   event.target.level.value =""
   event.target.percent.value =""
+  //
 }
 
 render(){
