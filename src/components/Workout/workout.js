@@ -63,8 +63,11 @@ render(){
     onChange={this.handleWeightChanged.bind(this)}
      placeholder="Enter Weight"
       name="food" 
-      required/>     
-    <button type="submit">Add Workout</button>
+      required/>
+      <br/>     
+    <button 
+    className="button-sign-list"
+    type="submit">Add Workout</button>
  
   </form>
   <br/><br/><br/><br/>

@@ -65,7 +65,7 @@ render(){
   console.log('is my info working',this.state)
 return (
 <div>
-<h1 className="bannerform">CALCULATE YOUR TOTAL DAILY ENERGY EXPENDITURE</h1>
+<h1 className="bannerform">CALCULATE YOUR TOTAL DAILY ENERGY </h1>
 <div className="cal-form">
 <form
   onSubmit={this.submitForm.bind(this)}

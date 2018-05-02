@@ -32,15 +32,19 @@ render(){
     onSubmit={this.submitForm.bind(this)}
     className="container">
     <label htmlFor="food"><b>Food</b></label>
+    <br/><br/>
     <input type="text"    
     value={this.state.food}
     onChange={this.handleFoodChanged.bind(this)}
      placeholder="Apple...etc"
       name="food" 
       required/>    
-    <button type="submit">Add Food</button>
+    <button
+    className="button-sign-list" 
+    type="submit">Add Food</button>
  
   </form>
+  <br/><br/>
   <FoodList/>
   </div>
   );
