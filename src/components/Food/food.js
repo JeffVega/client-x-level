@@ -17,7 +17,6 @@ handleFoodChanged(event){
 }
 
 submitForm(event){
-  console.log(event)
   event.preventDefault();
   this.props.dispatch(newFoods(
     this.state
@@ -25,7 +24,6 @@ submitForm(event){
   event.target.food.value =""
 }
 render(){
-  console.log('what state is this',this.state)
   return (
     <div>
       <Header/>

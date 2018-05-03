@@ -42,7 +42,6 @@ export const warningAuth = () => ({
 const storeAuthInfo = (authToken, dispatch) => {
     const decodedToken = jwtDecode(authToken);
     dispatch(setAuthToken(authToken));
-    console.log(authToken);
     dispatch(authSuccess(decodedToken.user));
     saveAuthToken(authToken);
 };

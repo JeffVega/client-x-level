@@ -21,7 +21,6 @@ handlePasswordChanged(event){
   })
 }
 submitForm(event){
-  console.log(event)
   event.preventDefault();
   
   return fetch(`${API_BASE_URL}/users`, {
@@ -42,7 +41,6 @@ submitForm(event){
     event.target.password.value = ""
 }
 render(){
-  console.log('what state is this',this.state)
   return (
     <form 
     onSubmit={this.submitForm.bind(this)}

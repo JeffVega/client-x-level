@@ -19,11 +19,7 @@ export const calculateUserError = (error) => ({
 })
 
 export const newCal = body => (dispatch) =>{
-  console.log("this is one of our loadToken",loadAuthToken())
     const authToken = loadAuthToken();
-    console.log("this is our state",body)
-    console.log("Bearer Token here",authToken)
-    console.log("weight HERE:",body.weight)
    fetch(`${API_BASE_URL}/cal`, {
     method: 'POST',
     body:JSON.stringify(body),

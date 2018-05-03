@@ -90,7 +90,7 @@ export const newFoods = user => dispatch => {
   })
       .then(res => res.json())
           .then(response=> {
-            console.log("this is our res ",response)
+            
           return dispatch(createFoodSuccess(response));
       })
       .catch(err => {
@@ -126,10 +126,10 @@ export const getFoods =() => (dispatch, getState) => {
   })
       .then(res => res.json())
       .then(food => {
-          console.log(food);
+          
           dispatch(getFoodsSuccess(food))})
       .catch(err=> {
-          console.log(err);
+          
           dispatch(getFoodsError(err))
       })
   
@@ -137,7 +137,7 @@ export const getFoods =() => (dispatch, getState) => {
 
 
 export const updateFood = user => dispatch => {
-  console.log(user);
+  
   const authToken = loadAuthToken();
   return fetch(`${API_BASE_URL}/food/${user.id}`, {
       method: 'PUT',

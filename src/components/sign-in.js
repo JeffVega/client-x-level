@@ -25,7 +25,6 @@ handlePasswordChanged(event){
   })
 }
 submitForm(event){
-  console.log(event)
   event.preventDefault();
   return this.props.dispatch(login(
     this.state.username,
@@ -35,7 +34,6 @@ submitForm(event){
   event.target.psw.value = ""
 }
 render(){
-  console.log('this is my login',this.state)
   return (
     <form 
     onSubmit={this.submitForm.bind(this)}

@@ -8,7 +8,6 @@ import './style/list-workout.css'
    this.props.dispatch(getWorkouts())
   }
 render(){
-  console.log("workout props here:",this.props)
 
   
 return (

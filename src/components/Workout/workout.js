@@ -32,8 +32,6 @@ handleWeightChanged(event){
 
 submitForm(event){
   event.preventDefault();
-  console.log('OUR WORKOUT STATE',this.state)
-  console.log(event)
   this.props.dispatch(newWorkout(
     this.state
   ))
@@ -42,7 +40,6 @@ submitForm(event){
   event.target.weight.value =""
 }
 render(){
-  console.log('what state is this',this.state)
   return (<div>
     <Header/>
     <form 

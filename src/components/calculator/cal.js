@@ -55,8 +55,6 @@ handleLevelChanged(event){
 
 submitForm(event){
   event.preventDefault(); 
-  console.log("OUR STATE",this.state)
-  console.log(event.target.sex.value)
   this.props.dispatch(newCal(
     this.state
   ))
@@ -71,7 +69,6 @@ submitForm(event){
 }
 
 render(){
-  console.log('is my info working',this.state)
 return (
 <div>
 <h1 className="bannerform">CALCULATE YOUR TOTAL DAILY ENERGY </h1>
@@ -156,7 +153,6 @@ return (
 }
 }
 const mapStateToProps = (state) =>{
-  console.log("THIS IS OUR STATE",state)
   return {
     cal:state.cal,
     calulationData:state.cal.data

@@ -90,7 +90,7 @@ export const newWorkout = works => dispatch => {
   })
       .then(res => res.json())
           .then(response=> {
-              console.log("this is our res ",response)
+              
           return dispatch(createWorkoutSuccess(response));
       })
       .catch(err => {
@@ -126,7 +126,6 @@ export const getWorkouts =() => (dispatch, getState) => {
   })
       .then(res => res.json())
       .then(WORKOUT => {
-          console.log(WORKOUT);
           dispatch(getWorkoutsSuccess(WORKOUT))})
       .catch(err=> {
           console.log(err);
@@ -137,7 +136,6 @@ export const getWorkouts =() => (dispatch, getState) => {
 
 
 export const updateWorkout = user => dispatch => {
-  console.log(user);
   const authToken = loadAuthToken();
   return fetch(`${API_BASE_URL}/workout/${user.id}`, {
       method: 'PUT',
