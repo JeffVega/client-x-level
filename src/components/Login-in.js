@@ -1,13 +1,7 @@
 import React from 'react'
 import LoginIn from './sign-in'
 import {Link} from 'react-router-dom'
-import photo from './video/photo_1.jpg'
 
-const style = {
-  width:"100%",
-  heigth:"100vh",
-  background:`url(${photo}) !important`
-}
 export default class LoginPage extends React.Component{
 
   render(){
@@ -16,7 +10,7 @@ export default class LoginPage extends React.Component{
       <div >
         
       <h1 role="banner" className="banner">X-LEVEL</h1>
-      <div className="sign-up" style={style}>
+      <div className="sign-up">
 
       <LoginIn/>
       <Link to="/signup">
