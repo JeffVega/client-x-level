@@ -33,18 +33,18 @@ body {
 }
 .button-sign-list{
   width: 10%;
-  background-color: white;
-  border-radius: 0.5%;
-  border: none;
-   color: black;
+  color: black;
+  background-color: #008CBA;
+  border-color: #008CBA;
    -webkit-transition-duration: 0.4s; /* Safari */
    transition-duration: 0.4s;
 }
 
 
 .button-sign-list:hover{
-  background-color: #DCF2B0; /* Green */
-  color: black;
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
 }
 
 .signup-banner{

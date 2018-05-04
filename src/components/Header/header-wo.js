@@ -10,7 +10,7 @@ export default function header(props){
         <header role="banner" >
       
         <h1  className="banner"/>
-          <img className="image-1"src={logo} />
+          <img className="image-1"src={logo} alt="logo for x-level" />
             
         </header>
       </div>

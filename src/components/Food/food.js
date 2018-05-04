@@ -27,21 +27,24 @@ render(){
   return (
     <div>
       <Header/>
+      <div className="input-form">
+      <h3 className="workout-input">Food Inputs</h3>
     <form       
     onSubmit={this.submitForm.bind(this)}
     className="container">
-    <label htmlFor="food"><b>Food</b></label>
     <br/><br/>
     <input type="text"
     onChange={this.handleFoodChanged.bind(this)}
      placeholder="Apple...etc"
       name="food" 
-      required/>    
+      required/>  
+      <br/><br/>  
     <button
     className="button-sign-list" 
     type="submit">Add Food</button>
- 
+  <br/><br/>
   </form>
+  </div>
   <br/><br/>
   <FoodList/>
   </div>

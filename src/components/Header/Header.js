@@ -12,7 +12,7 @@ export default function header(props){
       
         <h1  className="banner"/>
         <Nav/>
-          <img className="image-1"src={logo} />
+          <img className="image-1"src={logo} alt="logo for x level" />
             
         </header>
       </div>

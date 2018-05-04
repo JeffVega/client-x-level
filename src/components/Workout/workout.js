@@ -42,6 +42,8 @@ submitForm(event){
 render(){
   return (<div>
     <Header/>
+    <div className="input-form">
+    <h3 className="workout-input">Workout Inputs</h3>
     <form 
     onSubmit={this.submitForm.bind(this)}
     className="workoutForm">
@@ -61,12 +63,13 @@ render(){
      placeholder="Enter Weight"
       name="weight" 
       required/>
-      <br/>     
+      <br/><br/>     
     <button 
     className="button-sign-list"
     type="submit">Add Workout</button>
  
   </form>
+  </div>
   <br/><br/><br/><br/>
   <ListWorkout/>
   </div>
