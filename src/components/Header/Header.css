@@ -1,31 +1,19 @@
 .banner{
-  padding-top: 1em;
+  padding-top: 3em;
   background:white;
   text-align: center;
   border-bottom: 5px solid black;
   padding-bottom: 2em;
-  background: #61C9A8;
-  -webkit-animation: myfirst 20s infinite; /* Safari 4.0 - 8.0 */
-  -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
-  animation: myfirst 20s infinite;
-  animation-direction: alternate;
+  background:url('../photos/barbell.jpeg')  70% 35%;
+  color: whitesmoke;
+  
 }
 
 
-@-webkit-keyframes myfirst {
-  0%   {background: green; left: 0px; top: 0px;}
-  25%  {background: yellow; left: 200px; top: 0px;}
-  50%  {background: #61C9A8; left: 200px; top: 200px;}
-  75%  {background: green; left: 0px; top: 200px;}
-  100% {background: white; left: 0px; top: 0px;}
+
+.image-1{
+  position:absolute;
+  left:0;
+  top:0;
+  width: 10em
 }
-
-@keyframes myfirst {
-  0%   {background: green; left: 0px; top: 0px;}
-  25%  {background: yellow; left: 200px; top: 0px;}
-  50%  {background: #61C9A8; left: 200px; top: 200px;}
-  75%  {background: green; left: 0px; top: 200px;}
-  100% {background: white; left: 0px; top: 0px;}
-}
-
-

@@ -45,9 +45,9 @@ render(){
     <form 
     onSubmit={this.submitForm.bind(this)}
     className="container">
-    <h3> Sign Up </h3>
+    <h3 className="inputs"> Sign Up </h3>
     <br/>
-    <label htmlFor="uname"><b>Username</b></label>
+    <label className="inputs" htmlFor="uname"><b>Username</b></label>
     <br/>
     <input type="text"    
     name="username"
@@ -56,7 +56,7 @@ render(){
      
       required/>
     <br/><br/>
-    <label htmlFor="psw"><b>Password</b></label>
+    <label className="inputs" htmlFor="psw"><b>Password</b></label>
     <br/>
     <input type="password"
     onChange={this.handlePasswordChanged.bind(this)}

@@ -1,14 +1,16 @@
 .workout-happens{
-  text-align: center;
+  text-align: left;
+  padding: 8px;
   border: 2px solid #2E4057;
   background: #EBF5EE;
-  display: inline-block;
-  width: 50%;
+  display: block;
+  max-width: 100vh;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2em;
+  margin-top: 0.2em;
   
 }
 .workout-data{
   list-style: none;
+  margin-top: 1em;
 }
