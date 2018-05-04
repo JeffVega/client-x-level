@@ -48,7 +48,8 @@ body {
 }
 
 .signup-banner{
-  color: white;
+  color: turquoise;
+  text-decoration: underline;
   text-align: center;
 }
 
