@@ -23,7 +23,7 @@ handlePasswordChanged(event){
 submitForm(event){
   event.preventDefault();
   
-  return fetch(`${API_BASE_URL}/users`, {
+   fetch(`${API_BASE_URL}/users`, {
     method: 'POST',
     body:JSON.stringify({
       "username":this.state.username,
@@ -38,7 +38,7 @@ submitForm(event){
         console.log(err)
     })
     event.target.username.value = ""
-    event.target.password.value = ""
+    event.target.psw.value = ""
 }
 render(){
   return (
