@@ -158,5 +158,5 @@ const mapStateToProps = (state) =>{
     calulationData:state.cal.data
   }
 }
-
+//
 export default connect(mapStateToProps)(Cal)
