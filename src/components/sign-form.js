@@ -49,7 +49,7 @@ render(){
     <br/>
     <label className="inputs" htmlFor="uname"><b>Username</b></label>
     <br/>
-    <input type="text"    
+    <input type="text"   
     name="username"
     onChange={this.handleUsernameChanged.bind(this)}
      placeholder="Enter Username"

@@ -10,6 +10,10 @@ export default class LoginPage extends React.Component{
       <div >
         
       <Header/>
+      <div className="testlogin">
+      <p>Login:test1</p>
+      <p>Pass:12345678910</p>
+      </div>
       <div className="sign-up">
       
       <SignUp/>
