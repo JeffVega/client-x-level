@@ -5,6 +5,7 @@ import Signup from './sign-up';
 import  Main from './main';
 import Food from './Food/food';
 import Workout from './Workout/workout';
+import Aside from './aside'
 
 export default function Pages(){
   return(
@@ -19,6 +20,7 @@ export default function Pages(){
      <Route exact path="/workout/:id" component={Workout}/>
      <Route exact path="/food" component={Food}/>
      <Route exact path="/food/id" component={Food}/>
+     <Route exact path="/whatgoingon" component={Aside}/>
      </Switch>      
     </div>
     </Router>

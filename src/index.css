@@ -63,3 +63,32 @@ body {
   border-color: #007bff;
   margin-bottom: 1em;
 }
+.info-x-level{
+  text-align: center;
+  margin-left:1em;
+  color:white;
+  display: block;
+  border: 0.01em solid black;
+  background: grey;
+  padding: 1em;
+}
+
+.information{
+  position: inherit;
+  max-width: 5em;
+}
+
+.hellothere{
+  color:darkred;
+}
+
+.changeinList{
+border-bottom: none;
+font-size: 2em;
+}
+.banner-info{
+  color:black
+}
+.welcome-banner{
+  color:darkblue;
+}
