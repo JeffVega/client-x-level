@@ -53,7 +53,7 @@ render(){
     name="username"
     onChange={this.handleUsernameChanged.bind(this)}
      placeholder="Enter Username"
-     
+     //
       required/>
     <br/><br/>
     <label className="inputs" htmlFor="psw"><b>Password</b></label>
