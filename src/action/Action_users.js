@@ -1,4 +1,5 @@
 import {API_BASE_URL} from '../config'
+import { SubmissionError } from 'redux-form';
 
 export const CREATE_NEW_USER_REQUEST = 'CREATE_NEW_USER_REQUEST'
 export const createNewUser = (user) => ({

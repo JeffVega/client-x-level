@@ -1,72 +1,63 @@
-  import React from 'react'
+import React from 'react'
+import {reduxForm, Field} from 'redux-form';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import {required,length} from '../validators'
+import {newUser} from '../action/Action_users'
+import {login} from '../action/Action_auth'
+import Input from './input';
 import './sign-up.css'
-import {API_BASE_URL} from '../config'
-export default class SignForm extends React.Component{
-constructor(){
-  super();
-  this.state = {
-    username:"",
-    password:""
-  }
-}
-handleUsernameChanged(event){
-  this.setState({
-    username:event.target.value
-  })
-}
+ class SignForm extends React.Component {
 
-handlePasswordChanged(event){
-  this.setState({
-    password:event.target.value
-  })
-}
-submitForm(event){
-  event.preventDefault();
-  
-   fetch(`${API_BASE_URL}/users`, {
-    method: 'POST',
-    body:JSON.stringify({
-      "username":this.state.username,
-      "password":this.state.password
-    }),
-    headers:{
-      "Content-Type": "application/json"
+
+    submitForm(values){
+        const {username,password} = values;
+        const user = {username,password};
+      return this.props.dispatch(newUser(user
+      )).then(() => this.props.dispatch(login(username, password)));
     }
-})        
-    .then(response => response.json())
-    .catch(err => {
-        console.log(err)
-    })
-    event.target.username.value = ""
-    event.target.psw.value = ""
+    render() {
+        if(this.props.loggedIn) {
+            return <Redirect to="/" />;
+        }
+        const passwordLength = length({min: 10, max: 72});
+        return (
+            <form
+            className="container"
+            onSubmit={this.props.handleSubmit(values =>
+                this.submitForm(values)) }>
+                <br/>
+                <Field 
+                component={Input} 
+                name="username" 
+                type="text"
+                label="Username"
+                validate={[required]}
+                />
+                <br />
+                <Field 
+                component={Input} 
+                name="password" 
+                type="password" 
+                label="Password"
+                validate={[required,passwordLength]}
+                />
+                <br/>
+                <button
+                        className="button-sign"
+                        type="submit">
+                        REGISTER 
+                    </button>
+            </form>
+        );
+    }
 }
-render(){
-  return (
-    <form 
-    onSubmit={this.submitForm.bind(this)}
-    className="container">
-    <h3 className="inputs"> Sign Up </h3>
-    <br/>
-    <label className="inputs" htmlFor="uname"><b>Username</b></label>
-    <br/>
-    <input type="text"   
-    name="username"
-    onChange={this.handleUsernameChanged.bind(this)}
-     placeholder="Enter Username"
-     //
-      required/>
-    <br/><br/>
-    <label className="inputs" htmlFor="psw"><b>Password</b></label>
-    <br/>
-    <input type="password"
-    onChange={this.handlePasswordChanged.bind(this)}
-     placeholder="Enter Password"
-      name="psw" 
-      required/>
-      <br/><br/>
-    <button className="button-sign" type="submit">Sign Up</button>
- 
-  </form>
-  );
-  }
-}
+const mapStateToProps = state => ({
+    loggedIn: state.auth.currentUser !== null
+})  
+const connectedSignForm = connect(mapStateToProps)(SignForm);
+
+export default reduxForm({
+    form:'registerUser',
+    
+})(connectedSignForm)
