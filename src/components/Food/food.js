@@ -7,12 +7,18 @@ import  FoodList from './list-food'
 constructor(){
   super();
   this.state = {
-    food:""
+    food:"",
+    calories:""
   }
 }
 handleFoodChanged(event){
   this.setState({
     food:event.target.value
+  })
+}
+handleCaloriesChanged(event){
+  this.setState({
+    calories:event.target.value
   })
 }
 
@@ -22,6 +28,7 @@ submitForm(event){
     this.state
   ))
   event.target.food.value =""
+  event.target.calories.value=""
 }
 render(){
   return (
@@ -33,14 +40,20 @@ render(){
     onSubmit={this.submitForm.bind(this)}
     className="container">
     <br/><br/>
+    
     <input type="text"
     onChange={this.handleFoodChanged.bind(this)}
      placeholder="Apple...etc"
       name="food" 
-      required/>  
+      required/>
+      <input type="text"
+    onChange={this.handleCaloriesChanged.bind(this)}
+     placeholder="Calories"
+      name="calories" 
+      required/>    
       <br/><br/>  
     <button
-    className="button-sign-list" 
+    className="button-sign" 
     type="submit">Add Food</button>
   <br/><br/>
   </form>

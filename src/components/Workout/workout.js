@@ -65,7 +65,7 @@ render(){
       required/>
       <br/><br/>     
     <button 
-    className="button-sign-list"
+    className="button-sign"
     type="submit">Add Workout</button>
  
   </form>

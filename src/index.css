@@ -56,13 +56,7 @@ body {
 .inputs{
   color: white;
 }
-.button-cal{
-  width: 15%;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-  margin-bottom: 1em;
-}
+
 .info-x-level{
   text-align: center;
   margin-left:1em;
@@ -91,4 +85,24 @@ font-size: 2em;
 }
 .welcome-banner{
   color:darkblue;
+}
+.list-date{
+  font-size: 0.8em;
+  color:darkgreen;
+}
+@media only screen and (max-width: 425px){
+  .button-sign{
+    width: 100%;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+}
+@media only screen and (max-width: 1024px){
+  .button-sign{
+    width: 40%;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {deleteWorkouts}  from '../../action/Action_workout';
 import { getWorkouts } from '../../action/Action_workout';
 import './style/list-workout.css'
  class ListWorkouts extends React.Component{
@@ -18,6 +19,9 @@ return (
 <p ><strong>Title:</strong>   {workouts.title}</p>
   <p><strong>Muscle:</strong>  {workouts.muscle}</p>
   <p><strong>Weight:</strong>  {workouts.weight}</p>
+  <p>{workouts.create}</p>
+  <button onClick={() =>this.props.dispatch(deleteWorkouts(workouts.id))}> Trash</button>
+            
 </div>
   ))}
 

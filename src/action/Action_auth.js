@@ -1,6 +1,6 @@
 import jwtDecode from 'jwt-decode';
 import {SubmissionError} from 'redux-form';
-
+import { normalizeResponseErrors } from './Action_utils';
 import {API_BASE_URL} from '../config';
 import { clearAuthToken, saveAuthToken } from '../local-storage';
 
@@ -59,16 +59,16 @@ export const login = (username, password) => dispatch => {
                 password
             })
         })
+            .then(res => normalizeResponseErrors(res))
             .then(res => res.json())
             .then(({authToken}) => storeAuthInfo(authToken, dispatch))
             .catch(err => {
                 const {code} = err;
-                const message =
+                const message = err['message'] =
                     code === 401
-                        ? 'Incorrect username or password'
-                        : 'Unable to login, please try again';
+                        ? 'Incorrect username or password. Please try again.'
+                        : 'Unable to login, please try again.';
                 dispatch(authError(err));
-
                 return Promise.reject(
                     new SubmissionError({
                         _error: message
@@ -81,7 +81,7 @@ export const login = (username, password) => dispatch => {
 export const refreshAuthToken = () => (dispatch, getState) => {
     dispatch(authRequest());
     const authToken = getState().auth.authToken;
-    return fetch(`${API_BASE_URL}/api/refresh`, {
+    return fetch(`${API_BASE_URL}/refresh`, {
         method: 'POST',
         headers: {
             Authorization: `Bearer ${authToken}`

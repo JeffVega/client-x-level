@@ -1,76 +1,64 @@
 import React from 'react'
+import { Field, reduxForm, focus } from 'redux-form';
 import { connect } from 'react-redux';
 import { login } from '../action/Action_auth'
 import {withRouter} from 'react-router-dom'
-
+import Input from './input';
 
 
  class LoginForm extends React.Component{
-constructor(){
-  super();
-  this.state = {
-    username:"",
-    password:""
-  }
-}
-handleUsernameChanged(event){
-  this.setState({
-    username:event.target.value
-  })
-}
 
-handlePasswordChanged(event){
-  this.setState({
-    password:event.target.value
-  })
-}
-submitForm(event){
-  event.preventDefault();
-  return this.props.dispatch(login(
-    this.state.username,
-    this.state.password
+
+submitForm(values){
+  return this.props.dispatch(login(values.username,values.password
   )).then(() => this.props.history.push('/cal'))
-  event.target.uname.value = ""
-  event.target.psw.value = ""
 }
 render(){
+  let error;
+  if (this.props.error) {
+      error = (
+          <div className="form-error" aria-live="polite">
+              {this.props.error}
+          </div>
+      );
+    }
   return (
-    
+    <div>
     <form 
-    onSubmit={this.submitForm.bind(this)}
+    onSubmit={this.props.handleSubmit(values =>
+      this.submitForm(values)
+  )}
     className="container">
-    <h3 className="inputs" > Login</h3>
-    <br/>
-    <label className="inputs" htmlFor="uname"><b>Username</b></label>
-    <br/>
-    <input type="text"    
-    onChange={this.handleUsernameChanged.bind(this)}
-     placeholder="Enter Username"
-      name="uname" 
-      required/>
-    <br/><br/>
-    <label className="inputs" htmlFor="psw"><b>Password</b></label>
-    <br/>
-    <input type="password"
-    onChange={this.handlePasswordChanged.bind(this)}
-     placeholder="Enter Password"
-      name="psw" 
-      required/>
-      <br/><br/>
-    <button 
-    className="button-sign"
-    type="submit">Sign In</button>
+       <h3>Existing Users Login</h3>
+       {error}
+                    <label htmlFor="username">Username</label>
+                    <Field
+                        className="field"
+                        component={Input} 
+                        type="text"
+                        name="username"
+                        placeholder="Username"
+                    /> <br />
+                    <label htmlFor="password">Password</label>
+                    <Field
+                        className="field"
+                        component={Input} 
+                        type="password" 
+                        name="password"
+                        placeholder="Password"
+                    /> <br />
+                    <button type="submit" id="login-button">LOGIN</button>
     <br/><br/>
   </form>
+  </div>
   );
   }
 }
 // this.props.user = state.auth
 
-const mapStateToProps = (state) =>{
-  return {
-    user:state.auth,
-  }
-}
-
-export default withRouter( connect(mapStateToProps)(LoginForm))
+export default withRouter(reduxForm({
+  form: 'login',
+  onSubmitFail: (error, dispatch) => {
+      dispatch(focus('login', 'username'))}
+  
+})(LoginForm));

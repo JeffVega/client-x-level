@@ -60,6 +60,7 @@ export const getFoodsError = (error) => dispatch => ({
     error
 })
 
+
 export const UPDATE_FOOD_REQUEST = 'UPDATE_FOOD_REQUEST'
 export const updateFoodRequest = (food) => ({
     type:'UPDATE_FOOD_REQUEST',
@@ -77,6 +78,12 @@ export const updateFoodError = (error) => ({
     type:'UPDATE_FOOD_ERROR',
     error
 })
+export const DELETE_FOODS = 'DELETE_FOODS'
+export const deleteFoods = (id) => ({
+    type:'DELETE_FOODS',
+    id
+})
+
 export const newFoods = user => dispatch => {
   const authToken = loadAuthToken();
   return fetch(`${API_BASE_URL}/food`, {
@@ -157,4 +164,20 @@ export const updateFood = user => dispatch => {
       .catch(err => {
           dispatch(updateFoodError(err))
       });
+    }
+      export const deletefood = (id) => dispatch => {
+        const authToken = loadAuthToken();
+        return fetch(`${API_BASE_URL}/food/${id}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${authToken}`,
+            'Content-Type': 'application/json'
+        }
+        })
+        .then(res => {
+          if (!res.ok) {
+            return Promise.reject(res.statusText);
+          }
+          return dispatch(deleteFoods(id));
+        });
 };

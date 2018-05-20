@@ -10,7 +10,8 @@ import{
   GET_FOODS_ERROR,
   UPDATE_FOOD_REQUEST,
   UPDATE_FOOD_SUCCESS,
-  UPDATE_FOOD_ERROR
+  UPDATE_FOOD_ERROR,
+  DELETE_FOODS
   } from '../action/Action_food';
   
   
@@ -89,6 +90,11 @@ import{
               error: action.error
           })
       }   
+      if (action.type === DELETE_FOODS) {
+        return Object.assign({}, state, {
+          foods: state.foods.filter(food => food.id !== action.id)
+        });
+    }
       return state
   
   }

@@ -8,50 +8,63 @@ import {login} from '../action/Action_auth'
 import Input from './input';
 import './sign-up.css'
  class SignForm extends React.Component {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            msg: ''
+        }
+    }
 
     submitForm(values){
         const {username,password} = values;
         const user = {username,password};
       return this.props.dispatch(newUser(user
-      )).then(() => this.props.dispatch(login(username, password)));
-    }
+      )).then(() => this.props.dispatch(login(username, password)))
+      .then(this.setState({ msg: 'Thank you for signing up! Please login.' })
+    
+      )}
     render() {
-        if(this.props.loggedIn) {
-            return <Redirect to="/" />;
-        }
+
+        
         const passwordLength = length({min: 10, max: 72});
         return (
+            <div className="container">
+            {this.state.msg ? this.state.msg : ''}
             <form
             className="container"
             onSubmit={this.props.handleSubmit(values =>
                 this.submitForm(values)) }>
                 <br/>
+                <h3>Sign Up</h3>
+                <label htmlFor="username">Username</label>
                 <Field 
+                className="field"
                 component={Input} 
                 name="username" 
-                type="text"
-                label="Username"
+                type="text"               
                 validate={[required]}
                 />
                 <br />
+                <label htmlFor="password">Password</label>
                 <Field 
+                className="field"
                 component={Input} 
                 name="password" 
                 type="password" 
-                label="Password"
                 validate={[required,passwordLength]}
                 />
                 <br/>
                 <button
-                        className="button-sign"
+                       
                         type="submit">
                         REGISTER 
                     </button>
             </form>
+            </div>
         );
     }
 }
+
 const mapStateToProps = state => ({
     loggedIn: state.auth.currentUser !== null
 })  
