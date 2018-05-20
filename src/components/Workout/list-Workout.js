@@ -19,7 +19,7 @@ return (
 <p ><strong>Title:</strong>   {workouts.title}</p>
   <p><strong>Muscle:</strong>  {workouts.muscle}</p>
   <p><strong>Weight:</strong>  {workouts.weight}</p>
-  <p>{workouts.create}</p>
+  <p className="list-date">{workouts.create}</p>
   <button onClick={() =>this.props.dispatch(deleteWorkouts(workouts.id))}> Trash</button>
             
 </div>

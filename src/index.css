@@ -59,12 +59,14 @@ body {
 
 .info-x-level{
   text-align: center;
+  margin-top: 1em;
   margin-left:1em;
+  margin-right:1em;
   color:white;
   display: block;
-  border: 0.01em solid black;
-  background: grey;
+  background: none;
   padding: 1em;
+  opacity: 1;
 }
 
 .information{
@@ -81,7 +83,7 @@ border-bottom: none;
 font-size: 2em;
 }
 .banner-info{
-  color:black
+  color:black;
 }
 .welcome-banner{
   color:darkblue;
@@ -89,6 +91,14 @@ font-size: 2em;
 .list-date{
   font-size: 0.8em;
   color:darkgreen;
+}
+.landing-image{
+  width: 100%; 
+  display:block; 
+  height: auto;
+  opacity:0.4;
+  position: absolute;
+  
 }
 @media only screen and (max-width: 425px){
   .button-sign{
