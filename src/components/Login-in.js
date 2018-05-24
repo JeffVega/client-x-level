@@ -19,7 +19,7 @@ export default class LoginPage extends React.Component {
                     <Link className="signup-banner" to="/signup">
                         <p>Create an Account</p>
                     </Link>
-                    <Link to="/whatgoingon"><img className="information" src={what} alt="looking for information"/>
+                    <Link to="/home"><img className="information" src={what} alt="looking for information"/>
                     </Link>
                     {/* <SignUp/> */}
                 </div>

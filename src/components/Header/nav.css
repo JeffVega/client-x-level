@@ -4,6 +4,24 @@
 display: inline-block;
 list-style: none;
 }
+.nav-duo{
+  float: right;
+  z-index: auto;
+display: inline-block;
+list-style: none;
+font-size: 20px;
+}
+.nav-landing{
+  position: absolute;
+  float: right;
+  
+  z-index: auto;
+display: inline-block;
+list-style: none;
+}
+.nav-bar{
+  background: darkolivegreen;
+}
 li{
   border-bottom: 2px solid #2E4057;
 
@@ -15,4 +33,10 @@ a{
 }
 a:hover{
 color:#DCF2B0;
+}
+@media only screen and (max-width: 376px){
+  .nav-bar{
+    position: sticky;
+    background: none;
+  }
 }

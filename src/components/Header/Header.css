@@ -17,3 +17,39 @@
   top:0;
   width: 10em
 }
+.image-2{
+  position:absolute;
+  left:0;
+  top:0;
+  width: 10em
+}
+@media only screen and (max-width: 768px){
+  .image-2{
+    position:absolute;
+    left:0;
+    top:0;
+    width: 3em
+  }
+  .landing-image{
+    display: none;
+  }
+  .banner-info{
+    border:0.1em solid black;
+    background: darkgray
+  }
+  .welcome-banner{
+    border:0.1em solid black;
+    background: darkgray
+  }
+  .listed-info{
+    margin-right:2em;
+    margin-top:1em;
+    
+  }
+  .changeinList{
+    color:black;
+    width:100%;
+    border:0.1em solid black;
+    background: darkgray;
+  }
+  }

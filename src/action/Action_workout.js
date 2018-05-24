@@ -77,6 +77,11 @@ export const updateWorkoutError = (error) => ({
     type:'UPDATE_WORKOUT_ERROR',
     error
 })
+export const DELETE_WORKOUT = 'DELETE_WORKOUT'
+export const deleteWorkouts = (id) => ({
+    type:'DELETE_WORKOUT',
+    id
+})
 export const newWorkout = works => dispatch => {
   const authToken = loadAuthToken();
   return fetch(`${API_BASE_URL}/workout`, {
@@ -155,4 +160,20 @@ export const updateWorkout = user => dispatch => {
       .catch(err => {
           dispatch(updateWorkoutError(err))
       });
+    }
+      export const deleteWorkout = (id) => dispatch => {
+        const authToken = loadAuthToken();
+        return fetch(`${API_BASE_URL}/food/${id}`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${authToken}`,
+            'Content-Type': 'application/json'
+        }
+        })
+        .then(res => {
+          if (!res.ok) {
+            return Promise.reject(res.statusText);
+          }
+          return dispatch(deleteWorkouts(id));
+        });
 };

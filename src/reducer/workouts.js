@@ -10,7 +10,8 @@ import{
   GET_WORKOUTS_ERROR,
   UPDATE_WORKOUT_REQUEST,
   UPDATE_WORKOUT_SUCCESS,
-  UPDATE_WORKOUT_ERROR
+  UPDATE_WORKOUT_ERROR,
+  DELETE_WORKOUT
   } from '../action/Action_workout';
   
   
@@ -89,6 +90,11 @@ import{
               error: action.error
           })
       }
+      if (action.type === DELETE_WORKOUT) {
+        return Object.assign({}, state, {
+          workouts: state.workouts.filter(workout => workout.id !== action.id)
+        });
+    }
       else{   
       return state
       }

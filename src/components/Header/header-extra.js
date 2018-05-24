@@ -1,17 +1,15 @@
 import React from 'react'
 import './Header.css'
+import Nav from './nav-w-o'
 import logo from '../photos/logo.png'
+
 export default function header(props){
       
   
     return (
       <div>
-        <header role="banner" >
-      
-        <h1  className="banner"></h1>
-          <img className="image-1"src={logo} alt="logo for x-level" />
-            
-        </header>
+        <img className="image-2"src={logo} alt="logo for x level" />
+        <Nav/>
         
       </div>
   );

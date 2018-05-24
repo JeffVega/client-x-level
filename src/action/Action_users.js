@@ -1,4 +1,5 @@
 import {API_BASE_URL} from '../config'
+import { SubmissionError } from 'redux-form';
 
 export const CREATE_NEW_USER_REQUEST = 'CREATE_NEW_USER_REQUEST'
 export const createNewUser = (user) => ({
@@ -28,7 +29,6 @@ export const newUser = user => dispatch => {
       body: JSON.stringify(user)
   })
       .then(res => {
-          console.log(res);
           return res.json()})
       .then(()=> {
           return dispatch(createNewUserSuccess())
