@@ -1,7 +1,7 @@
 # X-Level
 
 ## View the Project live here:
-https://flamboyant-kirch-ad503f.netlify.com
+http://x-level.itsjeffvega.com
 
 ## View the Backend code here:
 https://github.com/JeffVega/server-x-level
