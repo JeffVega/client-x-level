@@ -1,13 +1,14 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #48614d !important ;
-}
+  background: #7EA1C1; }
 
+.info-x-level {
+  background: url("./components/photos/weight.jpg");
+  background-position: cover; }

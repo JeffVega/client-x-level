@@ -6,7 +6,6 @@ export default function Landing(){
   return(
     <div className="land-body">
     <Header/>
-    <img draggable="false" className="landing-image"src={video} />
     <div className='info-x-level'>
                 <aside>
                     <h1 className="banner-info">How it Works?</h1>

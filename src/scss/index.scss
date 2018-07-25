@@ -1,0 +1,20 @@
+$background-color:#7EA1C1;
+$landing-img:url('./components/photos/weight.jpg');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: $background-color;
+  }
+  
+  .info-x-level{
+      background: $landing-img;
+      background-position: cover;
+  }
