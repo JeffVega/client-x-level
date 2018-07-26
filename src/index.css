@@ -52,6 +52,15 @@ body {
   padding: 5px 5px;
   min-height: 100px; }
 
+.box-one {
+  animation-name: example;
+  animation-duration: 2s; }
+
+.box-two {
+  animation-name: example;
+  animation-delay: 1s;
+  animation-duration: 2s; }
+
 .nav-bar h1 {
   text-align: center;
   font-size: 100px; }

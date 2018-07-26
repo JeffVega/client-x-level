@@ -4,6 +4,19 @@ $landing-img:url('./components/photos/weight.jpg');
 $break-small: 320px;
 $break-large: 1200px;
 
+@mixin transition($x...){
+  -webkit-transition: $x;
+  -moz-transition: $x;
+  -ms-transition: $x;
+  -o-transition: $x;
+  transition: $x;
+}
+// @keyframes example {
+//   0%   {display: none}
+//   25%  {opacity: 0.55}
+//   50%  {opacity: 0.70}
+//   100% {opacity: 1}
+// }
 @import url('https://fonts.googleapis.com/css?family=Acme');
 
 *{
@@ -46,10 +59,7 @@ $break-large: 1200px;
       max-width: 40%;
       
     }
-    @media screen and (min-width: $tablet)  {
-      text-align: center
-      
-    }
+
     &:hover{
       opacity: 1;
     }
@@ -68,6 +78,16 @@ $break-large: 1200px;
   padding: 5px 5px;
   min-height: 100px;
   
+}
+
+.box-one{
+  animation-name: example;
+  animation-duration: 2s;
+}
+.box-two{
+  animation-name: example;
+  animation-delay: 1s;
+  animation-duration: 2s;
 }
 .nav-bar h1 {
   text-align: center;
