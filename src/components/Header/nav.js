@@ -6,8 +6,8 @@ export default function nav(){
 
 return (
 <div>
-<nav>
-<ul className="nav">
+<nav className='listed-links'>
+<ul className="nav-links">
 <Link to="/cal">
   <li>Home</li>
   </Link>

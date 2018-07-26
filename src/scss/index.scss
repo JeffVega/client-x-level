@@ -93,7 +93,29 @@ $break-large: 1200px;
   text-align: center;
   font-size: 100px
 }
-
+/* Linked to Different Links */
+.banner{
+  min-height: 20px;
+}
+.listed-links{
+  float: right;
+  margin-right: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+}
+.nav-links li{
+  color: white;
+  margin: 5px 2.5px;
+  padding: 10px ;
+  border: 2px solid black;
+  border-radius: 10px;
+  background:$button-colors;
+  opacity: 0.85;
+  &:hover{
+    opacity: 1;
+  }
+}
 /* Signing Up List */
 .image-1 {
   display: block;
