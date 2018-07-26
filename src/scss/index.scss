@@ -1,20 +1,80 @@
 $background-color:#7EA1C1;
+$button-colors:#2C827C;
 $landing-img:url('./components/photos/weight.jpg');
+$break-small: 320px;
+$break-large: 1200px;
+
+@import url('https://fonts.googleapis.com/css?family=Acme');
 
 *{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
+    font-family: 'Acme', sans-serif;
   }
   
   body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
     background: $background-color;
   }
-  
-  .info-x-level{
+  /* landing page */
+  .land-body{
       background: $landing-img;
-      background-position: cover;
+      background-size: cover;
+      min-height: 100vh
   }
+  .welcome-banner{
+    text-align: center;
+    font-size: 3em;
+  }
+  .nav-duo li {
+    float: right;
+    text-decoration: none;
+    position: relative;
+    max-width: 10%;
+    margin:20px 20px;
+    padding: 10px 10px;
+    background:$button-colors;
+    border-radius: 10px;
+    color: white;
+    opacity: 0.85;
+    @media screen and (max-width: $break-small)  {
+      max-width: 40%;
+      
+    }
+    @media screen and (max-width: $break-large)  {
+      max-width: 40%;
+      
+    }
+    @media screen and (min-width: $tablet)  {
+      text-align: center
+      
+    }
+    &:hover{
+      opacity: 1;
+    }
+
+}
+.listed-info{
+  overflow-y: hidden;
+}
+.changeinList {
+  display: inline-axis;
+  text-align: center;
+  border: 2px solid black;
+  background: white;
+  border-radius: 20px;
+  margin: 5px 5pc;
+  padding: 5px 5px;
+  min-height: 100px;
+  
+}
+.nav-bar h1 {
+  text-align: center;
+  font-size: 100px
+}
+/* The  mobile responsiveness */
+$break-small: 320px;
+$tablet:768px;
+$break-large: 1200px;
+
