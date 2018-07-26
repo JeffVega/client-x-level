@@ -31,8 +31,8 @@ In addition, help them out with using our Marcos Calculator
 * mLab
 * Netlify
 ## Screenshots
-![Home Page](https://user-images.githubusercontent.com/34497456/40525724-ad8711fc-5f96-11e8-8706-4df83ce7ce74.png)
-![Login & SignUp](https://user-images.githubusercontent.com/34497456/40525744-d69e314c-5f96-11e8-9583-1ed1e17764c3.png)
-![Cal](https://user-images.githubusercontent.com/34497456/40525778-0eeb4738-5f97-11e8-939c-d9b9f6eb0543.png)
-![Food](https://user-images.githubusercontent.com/34497456/40525804-3b87d7f2-5f97-11e8-93b9-386a4d6159ef.png)
-![Workout](https://user-images.githubusercontent.com/34497456/40525808-4f79835a-5f97-11e8-8e24-65d9df9897ef.png)
+![landing-page](https://user-images.githubusercontent.com/34497456/43286979-731c9514-90d8-11e8-80a0-342676f677d0.PNG)
+![sign-up](https://user-images.githubusercontent.com/34497456/43287008-8edff5a2-90d8-11e8-86e2-64b4527c4a71.PNG)
+![cal](https://user-images.githubusercontent.com/34497456/43287025-9a3037f0-90d8-11e8-8dab-e32f12000bc9.PNG)
+![food](https://user-images.githubusercontent.com/34497456/43287043-a57f9eac-90d8-11e8-953c-87773f05b136.PNG)
+![workouts](https://user-images.githubusercontent.com/34497456/43287050-af2ae1be-90d8-11e8-8714-4344d89be82c.PNG)
