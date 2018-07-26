@@ -78,16 +78,56 @@ body {
 
 .nav-links li {
   color: white;
-  margin: 5px 2.5px;
+  margin: 5px 5px;
   padding: 10px;
   border: 2px solid black;
   border-radius: 10px;
   background: #2C827C;
   opacity: 0.85; }
+  @media screen and (max-width: 426px) {
+    .nav-links li {
+      width: 200px;
+      margin-right: 80px; } }
+  @media screen and (max-width: 320px) {
+    .nav-links li {
+      width: 200px;
+      margin-right: 120px; } }
   .nav-links li:hover {
     opacity: 1; }
 
 /* Signing Up List */
+#login-button {
+  margin-left: 25px;
+  border: 2px solid #efefef;
+  background: #f3f3f3;
+  width: 100px; }
+
+.testlogin p {
+  margin-bottom: 10px;
+  text-align: center; }
+
+.container > label {
+  margin-left: 35px; }
+
+.Register-button {
+  margin-left: 25px;
+  border: 2px solid #efefef;
+  background: #f3f3f3;
+  width: 100px; }
+
+.signup-banner p {
+  margin-bottom: 10px; }
+
+.signup-banner {
+  color: #595959;
+  text-align: center;
+  text-decoration: none; }
+
+.information {
+  color: #595959;
+  text-align: center;
+  text-decoration: none; }
+
 .image-1 {
   display: block;
   margin-left: auto;
@@ -98,7 +138,74 @@ body {
   display: block;
   margin: auto;
   width: 200px;
+  border-radius: 20px;
+  background: #ffffe0;
   border: 2px solid black;
   padding: 20px; }
+
+header div {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 200px; }
+  @media screen and (max-width: 426px) {
+    header div {
+      position: relative;
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto; } }
+
+.bannerform {
+  text-align: center;
+  margin-bottom: 10px; }
+
+.calform {
+  text-align: center;
+  padding: 5px 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid black;
+  background: #dbdbdc;
+  border-radius: 20px;
+  max-width: 200px; }
+
+.circle-percent {
+  width: 100px; }
+
+.button-cal {
+  font-size: 20px;
+  border: none; }
+  .button-cal:hover {
+    cursor: pointer; }
+
+input {
+  border-radius: 5px;
+  border: none; }
+
+select {
+  border-radius: 5px;
+  border: none; }
+
+.workoutForm input {
+  padding: 10px;
+  margin: 10px 10px; }
+
+.input-form {
+  border-radius: 5px; }
+
+.button-sign {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background: #927764; }
+
+.container {
+  text-align: center; }
+
+.container input {
+  padding: 10px;
+  margin: 10px; }
 
 /* The  mobile responsiveness */

@@ -20,7 +20,7 @@ export default class LoginPage extends React.Component {
                         <p>Create an Account</p>
                     </Link>
                     <Link className="information" to="/home">
-                    information
+                    <p>information</p>
                     </Link>
                     {/* <SignUp/> */}
                 </div>

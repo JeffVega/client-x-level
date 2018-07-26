@@ -3,7 +3,7 @@ $button-colors:#2C827C;
 $landing-img:url('./components/photos/weight.jpg');
 $break-small: 320px;
 $break-large: 1200px;
-
+$break-small-mob:426px;
 @mixin transition($x...){
   -webkit-transition: $x;
   -moz-transition: $x;
@@ -106,33 +106,155 @@ $break-large: 1200px;
 }
 .nav-links li{
   color: white;
-  margin: 5px 2.5px;
+  margin: 5px 5px;
   padding: 10px ;
   border: 2px solid black;
   border-radius: 10px;
   background:$button-colors;
   opacity: 0.85;
+  @media screen and (max-width:$break-small-mob) {
+    width: 200px;
+    margin-right: 80px;
+  }
+  @media screen and (max-width:$break-small) {
+    width: 200px;
+    margin-right: 120px;
+  }
   &:hover{
     opacity: 1;
   }
 }
 /* Signing Up List */
+#login-button {
+  margin-left: 25px;
+  border:2px solid #efefef;
+  background: #f3f3f3;
+  width: 100px
+}
+
+.testlogin p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.container > label {
+  margin-left: 35px
+}
+.Register-button {
+     margin-left: 25px;
+  border:2px solid #efefef;
+  background: #f3f3f3;
+  width: 100px
+}
+.signup-banner p {
+  margin-bottom: 10px;
+}
+.signup-banner  {
+  color: #595959;
+  text-align: center;
+  text-decoration: none; 
+}
+.information {
+   color: #595959;
+  text-align: center;
+  text-decoration: none;
+}
 .image-1 {
   display: block;
  margin-left: auto;
  margin-right: auto;
  width: 15em;
 }
+
 .sign-up {
 display: block;
 margin: auto;
 width: 200px;
+border-radius: 20px;
+background: #ffffe0;
 border: 2px solid black;
  padding: 20px 
  
 }
+
+header div {
+  display: block;
+  position: absolute;
+  right:0;
+  width: 200px;
+  @media screen and (max-width:$break-small-mob) {
+    position: relative;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+}
+.bannerform {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.calform {
+  text-align: center;
+  padding: 5px 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border:2px solid black;
+  background: #dbdbdc;
+  border-radius: 20px;
+  max-width: 200px
+}
+
+.circle-percent {
+  width: 100px;
+}
+
+.button-cal {
+  font-size: 20px;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  
+}
+select {
+  border-radius: 5px;
+  border:none;
+}
+
+.workoutForm input{
+  padding: 10px ;
+  margin: 10px 10px;
+  
+}
+
+.input-form {
+  border-radius: 5px;
+}
+.button-sign {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background: #927764;
+}
+.container {
+  text-align: center;
+  
+}
+.container input{
+  padding: 10px;
+  margin: 10px;
+}
+
 /* The  mobile responsiveness */
 $break-small: 320px;
+$break-small-mob:425px;
 $tablet:768px;
 $break-large: 1200px;
 

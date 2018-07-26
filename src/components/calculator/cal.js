@@ -1,4 +1,6 @@
 import React from 'react'
+import CircularProgressbar from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import './cal.css'
 import {connect} from 'react-redux'
 import {newCal} from '../../action/Action_cal'
@@ -156,9 +158,64 @@ class Cal extends React.Component {
                     .calulationData
                     .map((calulation, index) => (
                         <div key={index} className="dataOfEn">
-                            <p >Calories:{calulation.calories}</p>
-                            <p >Protein:{calulation.protein}</p>
-                            <p >Fat:{calulation.fat}</p>
+                        <CircularProgressbar
+  percentage={calulation.calories}
+  initialAnimation={true}
+  text={` Calories ${calulation.calories}`}
+  className="circle-percent"
+  styles={{
+    background: {
+      fill: '#3e98c7',
+    },
+    text: {
+      fill: '#3c3c3d',
+      fontSize:'10px'
+    },
+    path: {
+      stroke: '#96d8ce',
+    },
+    trail: { stroke: 'transparent' },
+  }}
+/>
+<CircularProgressbar
+  percentage={calulation.protein}
+  initialAnimation={true}
+  text={` Protein ${calulation.protein}`}
+  className="circle-percent"
+  styles={{
+    background: {
+      fill: '#3e98c7',
+    },
+    text: {
+      fill: '#3c3c3d',
+      fontSize:'10px'
+    },
+    path: {
+      stroke: '#96d8ce',
+    },
+    trail: { stroke: 'transparent' },
+  }}
+/>
+<CircularProgressbar
+  percentage={calulation.fat}
+  initialAnimation={true}
+  text={` Fat ${calulation.fat}`}
+  className="circle-percent"
+  styles={{
+    background: {
+      fill: '#3e98c7',
+    },
+    text: {
+      fill: '#3c3c3d',
+      fontSize:'10px'
+    },
+    path: {
+      stroke: '#96d8ce',
+    },
+    trail: { stroke: 'transparent' },
+  }}
+/>
+
                         </div>
                     ))
 }
