@@ -55,7 +55,7 @@ import './sign-up.css'
                 />
                 <br/>
                 <button
-                       
+                       className='Register-button'
                         type="submit">
                         REGISTER 
                     </button>

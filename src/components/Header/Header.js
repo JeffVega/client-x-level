@@ -9,12 +9,10 @@ export default function header(props){
     return (
       <div>
         <header role="banner" >
-      
-        <h1  className="banner"/>
-        <Nav/>
-          <img className="image-1"src={logo} alt="logo for x level" />
-            
-        </header>
+          <img className="image-2"src={logo} alt="logo for x level" />
+         <Nav/>
+         </header>
+       
       </div>
   );
   }
