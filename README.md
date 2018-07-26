@@ -1,7 +1,7 @@
 # X-Level
 
 ## View the Project live here:
-http://x-level.itsjeffvega.com
+https://x-level.netlify.com/
 
 ## View the Backend code here:
 https://github.com/JeffVega/server-x-level
