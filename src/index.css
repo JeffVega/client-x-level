@@ -65,4 +65,18 @@ body {
   text-align: center;
   font-size: 100px; }
 
+/* Signing Up List */
+.image-1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15em; }
+
+.sign-up {
+  display: block;
+  margin: auto;
+  width: 200px;
+  border: 2px solid black;
+  padding: 20px; }
+
 /* The  mobile responsiveness */
