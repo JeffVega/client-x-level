@@ -8,9 +8,7 @@ export default function header(props){
   
     return (
       <div>
-        <img className="image-2"src={logo} alt="logo for x level" />
         <Nav/>
-        
       </div>
   );
   }

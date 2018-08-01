@@ -6,6 +6,7 @@ export default function nav(){
 return (
 <div>
 <nav className="nav-bar">
+<h1>X-LEVEL</h1>
 <ul className="nav-duo">
   <Link to="/signin">
   <li>Login</li>
