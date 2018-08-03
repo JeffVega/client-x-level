@@ -151,6 +151,13 @@ header div {
   position: absolute;
   right: 0;
   width: 200px; }
+
+  .CircularProgressbar {
+    width: 200px !important;
+    margin-top: 5px!important;
+  margin-left: 50px !important;
+  margin-right: auto !important;
+  }
   @media screen and (max-width: 426px) {
     header div {
       position: relative;
@@ -172,8 +179,7 @@ header div {
   border-radius: 20px;
   max-width: 200px; }
 
-.circle-percent {
-  width: 100px; }
+
 
 .button-cal {
   font-size: 20px;
