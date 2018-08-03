@@ -158,6 +158,10 @@ header div {
   margin-left: 50px !important;
   margin-right: auto !important;
   }
+  .dataOfEn {
+    text-align: center!important;
+}
+
   @media screen and (max-width: 426px) {
     header div {
       position: relative;
