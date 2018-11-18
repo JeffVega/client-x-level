@@ -1,13 +1,27 @@
 import React from 'react'
-import Header from './Header/header-extra'
+import Header from './Header/Header'
+import BackgroundImg from './photos/x-level-update.jpg'
+    const mainBg = {
+        backgroundColor: '#FFFFFF',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
 
+        backgroundPosition: 'center',
+      }
+     
 
-export default function Landing(){
+export default class Landing extends React.Component{
+  
+        
+    render(){
+        
   return(
-    <div className="land-body">
+    <div className='landing-page'>
+
     <Header/>
     <div className='info-x-level'>
-                    <h1 className="welcome-banner">We know losing weight isn't easy So we did the hard part for you</h1>
+                <img className="photo_img" src={BackgroundImg}  />
+                    <h1 className="instruction_one">We know losing weight isn't easy So we did the hard part for you</h1>
                     <ul className="listed-info">
                         <li className="changeinList box-one"><strong>
                             First: You can start by using our Marcos calculater,<br/>
@@ -27,4 +41,5 @@ export default function Landing(){
             </div>
       </div>
   )
+}
 }

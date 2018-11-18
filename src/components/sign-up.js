@@ -1,7 +1,7 @@
 import React from 'react'
 import SignUp from './sign-form'
 import {Link} from 'react-router-dom'
-import Header from './Header/header-wo'
+import Header from './Header/Header'
 export default class LoginPage extends React.Component {
 
     render() {

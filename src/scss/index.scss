@@ -3,7 +3,7 @@ $button-colors:#2C827C;
 $landing-img:url('./components/photos/weight.jpg');
 $break-small: 320px;
 $break-large: 1200px;
-$break-small-mob:426px;
+$break-small-mob: 426px;
 @mixin transition($x...){
   -webkit-transition: $x;
   -moz-transition: $x;
