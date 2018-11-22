@@ -2,11 +2,12 @@ import React from 'react'
 import './nav.css'
 import {connect} from 'react-redux';
 import {clearAuthToken} from '../../local-storage'
-import {clearAuth} from '../../action/Action_auth'
+import {LogoutUser} from '../../action/Action_auth'
 import {Link} from 'react-router-dom'
 export class Nav extends React.Component{
   logOut() {
-    this.props.dispatch(clearAuth());
+    console.log(this.props)
+    this.props.dispatch(LogoutUser());
     clearAuthToken();
 }
 

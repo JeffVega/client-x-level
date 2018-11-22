@@ -1,0 +1,36 @@
+
+.testlogin{
+    position: absolute;
+    top: 30px;
+    left: 25px
+}
+
+.form-error {
+    color: rgba(254,23,0,0.72);
+    
+}
+
+.container_login_form {
+text-align: center;
+    padding-right: 20px
+}
+#login-button {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(35,222,150,0.44);
+    color: white;
+}
+.information p {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    color: rgba(83,227,56,0.85)
+}
+.signup-banner p {
+        position: absolute;
+    bottom: 0;
+    left: 20px;
+    color: blue;
+}

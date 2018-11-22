@@ -1,25 +1,24 @@
 import React from 'react'
 import LoginIn from './sign-in'
 import {Link} from 'react-router-dom'
-import Header from './Header/Header'
+import './login-landing.css'
 export default class LoginPage extends React.Component {
 
     render() {
         return (
 
-            <div >
+            <div className='login_landing_page'>
 
-                <Header/>
-                <div className="sign-up">
+                <div className="sign_up_form">
 
                     <LoginIn/>
                     <Link className="signup-banner" to="/signup">
                         <p>Create an Account</p>
                     </Link>
                     <Link className="information" to="/home">
-                    <p>information</p>
+                        <p>information</p>
                     </Link>
-                    {/* <SignUp/> */}
+
                 </div>
             </div>
         )

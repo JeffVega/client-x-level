@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route,Redirect,Switch } from "react-router-dom";
-import Login from './Login-in';
+import Login from './Login-landing';
 import Signup from './sign-up';
 import  Main from './main';
 import Food from './Food/food';

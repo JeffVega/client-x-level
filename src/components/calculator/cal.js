@@ -4,6 +4,8 @@ import 'react-circular-progressbar/dist/styles.css';
 import './cal.css'
 import {connect} from 'react-redux'
 import {newCal} from '../../action/Action_cal'
+
+
 class Cal extends React.Component {
     constructor(props) {
         super(props)

@@ -1,6 +1,5 @@
 import React from 'react'
 import {reduxForm, Field} from 'redux-form';
-import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {required,length} from '../validators'
 import {newUser} from '../action/Action_users'
