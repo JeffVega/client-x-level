@@ -36,7 +36,7 @@ class LoginForm extends React.Component {
                     className="container_login_form">
 
                     {error}
-                    <label htmlFor="member_login">Member Login</label>
+                    <h3 className="member_login_info">Member Login</h3>
                     <Field
                         className="field"
                         component={Input}
@@ -44,7 +44,7 @@ class LoginForm extends React.Component {
                         name="username"
                         placeholder="Username"/>
                     <br/>
-                    <label htmlFor="password">Password</label>
+                    
                     <Field
                         className="field"
                         component={Input}

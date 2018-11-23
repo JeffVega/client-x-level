@@ -1,9 +1,12 @@
 .login_landing_page{
-    background: rgb(205,235,142); /* Old browsers */
+   background: rgb(205,235,142); /* Old browsers */
+
 background: -moz-linear-gradient(top, rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    height: 100vh;
+background: linear-gradient(to bottom, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%),url('./photos/login-page.jpg'); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background:linear-gradient(0deg,rgba(206, 235, 142, 0.514), rgba(165, 201, 86, 0.76) ),url("./photos/login-page.jpg");
+background-size: cover;
+height: 100vh;
 
 }
 .sign_up_form{
