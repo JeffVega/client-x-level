@@ -1,0 +1,64 @@
+
+.testlogin{
+    position: absolute;
+    top: 55px;
+    left: 25px
+}
+
+.form-error {
+    color: rgba(254,23,0,0.72);
+    
+}
+
+.container_login_form {
+text-align: center;
+    padding-right: 20px
+}
+
+.member_login_info {
+    padding: 10px;
+}
+#username {
+    width: 10pc;
+    height: auto;
+    border: 2px solid rgba(101,94,94,0.6);
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+#password {
+    width: 10pc;
+    height: auto;
+    border: 2px solid rgba(101,94,94,0.6);
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+#login-button {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgb(120,173,156);
+    color: white;
+    outline: none;
+}
+.information p {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    color: rgb(162,152,181);
+}
+.signup-banner p {
+        position: absolute;
+    bottom: 0;
+    left: 20px;
+    color: rgb(162,152,181);
+}
+@media only screen and (max-width: 600px){
+    .testlogin{
+        position:static;
+        text-align: center;
+        padding-right: 20px
+    }
+}

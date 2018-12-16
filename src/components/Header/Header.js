@@ -7,9 +7,9 @@ export default function header(props){
       
   
     return (
-      <div>
+      <div className="header_main_page">
         <header role="banner" >
-          <img className="image-2"src={logo} alt="logo for x level" />
+          <img className="logo_img"src={logo} alt="logo for x level" />
          <Nav/>
          </header>
        

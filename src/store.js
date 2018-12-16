@@ -4,15 +4,19 @@ import {reducer as formReducer} from 'redux-form';
 import {calReducer} from './reducer/cal'
 import {foodReducer} from './reducer/food'
 import {workoutReducer} from './reducer/workouts'
+import { onlineUsersReducer } from './reducer/online';
 import {combineUser} from './reducer/user';
+
+
 import authReducer from './reducer/auth';
 
 const store = createStore(combineReducers({
     user: combineUser,
+    online:onlineUsersReducer,
     form: formReducer,
     cal: calReducer,
     food: foodReducer,
     workout: workoutReducer,
-    auth: authReducer
+    auth: authReducer,
 }), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk));
 export default store

@@ -1,0 +1,25 @@
+.login_landing_page{
+   background: rgb(205,235,142); /* Old browsers */
+
+background: -moz-linear-gradient(top, rgba(205,235,142,1) 0%, rgba(165,201,86,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(205,235,142,1) 0%,rgba(165,201,86,1) 100%),url('./photos/login-page.jpg'); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+background:linear-gradient(0deg,rgba(206, 235, 142, 0.514), rgba(165, 201, 86, 0.76) ),url("./photos/login-page.jpg");
+background-size: cover;
+height: 100vh;
+
+}
+.login_in_form{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    max-width: 700px;
+    height: auto;
+    margin: 8pc auto;
+    border: 2px solid rgba(255, 255, 255, 0.452);
+    border-radius: 20px;
+    background: rgb(248, 248, 248);
+    box-shadow: 2px 1px 10px 5px #88888898;
+    
+}

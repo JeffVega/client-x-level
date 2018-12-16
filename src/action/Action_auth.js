@@ -11,8 +11,10 @@ export const setAuthToken = authToken => ({
 });
 
 export const CLEAR_AUTH = 'CLEAR_AUTH';
-export const clearAuth = () => ({
-    type: CLEAR_AUTH
+export const clearAuth = (online,userId) => ({
+    type: CLEAR_AUTH,
+    online,
+    userId
 });
 
 export const AUTH_REQUEST = 'AUTH_REQUEST';
@@ -94,5 +96,25 @@ export const refreshAuthToken = () => (dispatch, getState) => {
             dispatch(authError(err));
             dispatch(clearAuth());
             clearAuthToken(authToken);
+        });
+};
+
+export const LogoutUser = () => (dispatch, getState) => {
+    dispatch(authRequest());
+    const authToken = getState().auth.authToken;
+    return fetch(`${API_BASE_URL}/logout`, {
+        method: 'POST',
+        headers: {
+            Authorization: `Bearer ${authToken}`
+        }
+    })
+        
+        .then(res => res.json())
+        .then(({authToken}) => clearAuthToken(authToken))
+        .then(() => dispatch(clearAuth()))
+        .catch(err => {
+            dispatch(authError(err));
+            dispatch(clearAuth());
+            ;
         });
 };
