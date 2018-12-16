@@ -42,6 +42,10 @@ text-align: center;
     background: rgb(120,173,156);
     color: white;
     outline: none;
+    transition: 0.3s
+}
+#login-button:hover{
+    background: rgb(26, 88, 69);
 }
 .information p {
     position: absolute;

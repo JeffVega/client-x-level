@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../Header/Header'
 import {connect} from 'react-redux'
 import {newFoods} from '../../action/Action_food'
-import Online from '../online/online';
+
 
 
 import  FoodList from './list-food'
@@ -36,7 +36,6 @@ submitForm(event){
 render(){
   return (
     <div>
-      <Online/>
       <Header/>
       <div className="input-form">
       <h3 className="workout-input">Food Inputs</h3>

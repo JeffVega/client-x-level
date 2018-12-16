@@ -6,7 +6,7 @@ import {LogoutUser} from '../../action/Action_auth'
 import {Link} from 'react-router-dom'
 export class Nav extends React.Component{
   logOut() {
-    console.log(this.props)
+    
     this.props.dispatch(LogoutUser());
     clearAuthToken();
 }
@@ -27,7 +27,7 @@ export class Nav extends React.Component{
                           <Link to="/workout">
                             <li>Workouts</li>
                           </Link>
-                          <Link  onClick={() => this.logOut()}  to="/">
+                          <Link   className="logout_link" onClick={() => this.logOut()}  to="/">
                     <li>Logout</li>
                           </Link>
             </ul>

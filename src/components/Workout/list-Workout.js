@@ -10,7 +10,7 @@ import './style/list-workout.css'
   }
 render(){
 
-  console.log(this.props)
+ 
 return (
  <div >
     {this.props.workoutOutput.map((workouts,index)=>(
@@ -30,7 +30,7 @@ return (
 }
  }
 const mapStateToProps =(state) =>{
-  console.log(state)
+  
   return {
     workout:state.workout,
     workoutOutput:state.workout.workouts

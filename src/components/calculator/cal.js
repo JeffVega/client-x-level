@@ -4,7 +4,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import './cal.css'
 import {connect} from 'react-redux'
 import {newCal} from '../../action/Action_cal'
-
+import Online from '../online/online';
 
 class Cal extends React.Component {
     constructor(props) {
@@ -61,7 +61,7 @@ class Cal extends React.Component {
     render() {
 
         return (
-            <div>
+            <div className="landing_starter">
                 <h1 className="bannerform">CALCULATE YOUR TOTAL DAILY ENERGY
                 </h1>
                 <div className="cal-form">
@@ -70,7 +70,7 @@ class Cal extends React.Component {
                         .submitForm
                         .bind(this)}
                         className="calform">
-                        <label>Age</label><br/>
+                        <label>Age</label>
                         <input
                             required
                             onChange={this
@@ -80,8 +80,8 @@ class Cal extends React.Component {
                             type="number"
                             min="0"
                             max="120"/>
-                        <br/>
-                        <label>Sex</label><br/>
+  
+                        <label>Sex</label>
                         <select
                             required
                             name="sex"
@@ -92,8 +92,8 @@ class Cal extends React.Component {
                             <option value="male">MALE</option>
                             <option value="female">FEMALE</option>
                         </select>
-                        <br/>
-                        <label>Weight Input</label><br/>
+
+                        <label>Weight Input</label>
                         <input
                             name="weight"
                             onChange={this
@@ -103,7 +103,7 @@ class Cal extends React.Component {
                             required
                             min="0"/>
                         <h4>Height Input</h4>
-                        <label>Feet Input</label><br/>
+                        <label>Feet Input</label>
                         <input
                             onChange={this
                             .handleFeetChanged
@@ -111,8 +111,8 @@ class Cal extends React.Component {
                             name="feet"
                             type="number"
                             required
-                            min="0"/><br/>
-                        <label>Inches Input</label><br/>
+                            min="0"/>
+                        <label>Inches Input</label>
                         <input
                             name="inches"
                             onChange={this
@@ -121,9 +121,9 @@ class Cal extends React.Component {
                             type="number"
                             required
                             min="0"/>
-                        <br/><br/>
+
                         <label>Activity Level</label>
-                        <br/>
+
                         <select
                             required
                             name="level"
@@ -136,9 +136,9 @@ class Cal extends React.Component {
                             <option value="3">Moderate</option>
                             <option value="4">Extreme</option>
                         </select>
-                        <br/><br/>
+
                         <label>Weight Deficit</label>
-                        <br/><br/>
+
                         <select
                             required
                             name="percent"
@@ -149,8 +149,7 @@ class Cal extends React.Component {
                             <option value="1">10% Lose</option>
                             <option value="2">20% Lose</option>
                         </select>
-                        <br/>
-                        <br/><br/>
+
                         <button  className="button-cal">Calculate</button>
 
                     </form>
@@ -221,7 +220,12 @@ class Cal extends React.Component {
                         </div>
                     ))
 }
+<div className="online_user">
+<h1>Online Users</h1>
+<Online/>
+</div>
             </div>
+
         );
     }
 }

@@ -2,8 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {getFoods} from '../../action/Action_food';
 import {deletefood} from '../../action/Action_food'
-
-
+import '../listed-items.css'
 // import './list-workout.css'
 class ListFood extends React.Component {
 

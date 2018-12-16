@@ -1,0 +1,78 @@
+.landing_starter{
+    background:rgba(200, 238, 200, 0.664);
+      height: calc(100vh - 105px);
+ 
+ }
+.bannerform{
+    text-align: center;
+    position: relative;
+}
+
+.calform {
+    display: inline-grid;
+    text-align: left;
+    padding: 10px 20px;
+    margin: 10px;
+    max-width: auto;
+    border: none;
+    background: rgba(255,255,255,0.84);
+    box-shadow: 5px 10px #888888; 
+    color:black;
+    border-radius: 10px;
+}
+.calform input {
+    width: 100px;
+
+}
+.calform select{
+    width: 105px;
+
+}
+.button-cal {
+    margin: 10px;
+    border:none;
+    background: rgb(16,136,253);
+    color:white;
+    padding: 10px 2px;
+    border-radius:10px;
+    transition: 0.4s;
+    outline-color:none;
+    
+}
+.button-cal:hover{
+    background: rgb(68,76,226);
+    color:white;
+    
+}
+
+
+.circle-percent{
+    
+    margin: 10px 20px;
+  text-align: center;
+    max-width: 300px;
+}
+
+.dataOfEn {
+    position: absolute;
+    right: 90px;
+    top: 15pc;
+    margin: 10px;
+    padding: 10px;
+}
+.online_user{
+    background: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    width: auto;
+    height: auto;
+    overflow-wrap:scrolbar;
+    position: absolute;
+    top: 150px;
+    right : 100px;
+}
+.online_user p{
+    background: rgb(130,230,130);
+    padding: 5px;
+    margin: 10px;
+}

@@ -27,7 +27,7 @@ import { getOnlineUsers } from '../../action/Action_online';
      }
  }
  const mapStateToProps = (state) => {
-     console.log(state)
+     
     return {onlineUsers:state.online,onlineOutput:state.online.onlineUsers}
 }
 export default connect(mapStateToProps)(onlineUsersBuild)

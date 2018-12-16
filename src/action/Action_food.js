@@ -133,7 +133,7 @@ export const getFoods =() => (dispatch, getState) => {
   })
       .then(res => res.json())
       .then(food => {
-          console.log(food,'cake')
+          
           dispatch(getFoodsSuccess(food))})
       .catch(err=> {
           

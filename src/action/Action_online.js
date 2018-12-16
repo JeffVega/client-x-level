@@ -30,7 +30,7 @@ export const getOnlineUsers = () =>(dispatch,getState)=>{
     })
     .then(res => res.json())
     .then(onlineUser =>{
-        console.log(onlineUser,'this is our')
+        
         dispatch(onlineUsersSucess(onlineUser))
     })
     .catch( err => {
