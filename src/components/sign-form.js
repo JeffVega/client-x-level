@@ -27,10 +27,10 @@ import './sign-up.css'
         
         const passwordLength = length({min: 10, max: 72});
         return (
-            <div className="container">
+            <div className="sign_up_page">
             {this.state.msg ? this.state.msg : ''}
             <form
-            className="container"
+            className="sign_up_page_form"
             onSubmit={this.props.handleSubmit(values =>
                 this.submitForm(values)) }>
                 <br/>
@@ -54,7 +54,7 @@ import './sign-up.css'
                 />
                 <br/>
                 <button
-                       className='Register-button'
+                       id='login-button'
                         type="submit">
                         REGISTER 
                     </button>

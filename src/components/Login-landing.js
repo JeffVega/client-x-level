@@ -9,7 +9,7 @@ export default class LoginPage extends React.Component {
 
             <div className='login_landing_page'>
 
-                <div className="sign_up_form">
+                <div className="login_in_form">
 
                     <LoginIn/>
                     <Link className="signup-banner" to="/signup">

@@ -1,7 +1,6 @@
 import React from 'react'
 import SignUp from './sign-form'
 import {Link} from 'react-router-dom'
-import Header from './Header/Header'
 export default class LoginPage extends React.Component {
 
     render() {
@@ -9,15 +8,19 @@ export default class LoginPage extends React.Component {
 
             <div >
 
-                <Header/>
                
-                <div className="sign-up">
+                <div className="login_landing_page">
+                <div className="sign_up_form">
 
                     <SignUp/>
                     <Link className="signup-banner" to="/signin">
                         <br/>
                         <p>Sign In</p>
                     </Link>
+                    <Link className="information" to="/home">
+                        <p>Information</p>
+                    </Link>
+                </div>
                 </div>
             </div>
         )

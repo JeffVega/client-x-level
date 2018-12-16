@@ -14,16 +14,24 @@ export default class Landing extends React.Component{
     <Header/>
     <div className='info-x-level'>
                 <img className="photo_img" alt="logo_x-level" src={BackgroundImg}  />
-                    <div className="landing_info_boxs">
-                        <ul>
-                        <li><p>Firdy</p></li>
-                        <li><p>Sec</p></li>
-                        <li><p>Third</p></li>
-
-
-                        </ul>
-                    </div>
-                       
+                <h1 className="banner">A CUSTOM MACRO PLAN </h1>
+                <div className="boxes_info">
+                <div>
+                    <p>
+                        Marcos
+                    </p>
+                </div>
+                <div>
+                    <p>
+                    Food
+                    </p>
+                </div>
+                <div>
+                    <p>
+                    Workout
+                    </p>
+                </div>
+                </div>
             </div>
       </div>
   )
