@@ -7,8 +7,7 @@ https://x-level.netlify.com/
 https://github.com/JeffVega/server-x-level
 
 ## Project Summary
-X-level is an application used to help users keep track of the food they've eaten, and also the workout.
-In addition, help them out with using our Marcos Calculator 
+X-level is an application used to help users keep track of the food they've eaten, and also workouts.
 
 ## Tech Used
 
