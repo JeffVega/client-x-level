@@ -2,8 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {getFoods} from '../../action/Action_food';
 import {deletefood} from '../../action/Action_food'
-import '../listed-items.css'
-// import './list-workout.css'
 class ListFood extends React.Component {
 
     componentDidMount() {
@@ -22,12 +20,10 @@ class ListFood extends React.Component {
                     .map((foods, index) => (
                         
                         <div key={index} className="workout-happens">
-
                             <p><strong>Food:</strong>{foods.food}</p>
                             <p><strong>Calories:</strong>{foods.calories}</p>
                             <p className="list-date">{foods.create}</p>
-                            
-<button onClick={() =>this.props.dispatch(deletefood(foods.id))}> Trash</button>                            
+                               <button onClick={() =>this.props.dispatch(deletefood(foods.id))}> Trash</button>                            
                         </div>
                     ))}
         

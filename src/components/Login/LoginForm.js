@@ -1,9 +1,10 @@
 import React from 'react'
 import {Field, reduxForm, focus} from 'redux-form';
-import {login} from '../action/Action_auth'
+import {login} from '../../action/Action_auth'
 import {withRouter} from 'react-router-dom'
-import Input from './input';
-import './sign-in.css'
+import Input from '../Utils/input';
+
+//Login Page
 
 class LoginForm extends React.Component {
 
@@ -11,7 +12,7 @@ class LoginForm extends React.Component {
         return this
             .props
             .dispatch(login(values.username, values.password))
-            .then(() => this.props.history.push('/cal'))
+            .then(() => this.props.history.push('/dash'))
     }
     render() {
         let error;

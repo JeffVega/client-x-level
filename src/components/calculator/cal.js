@@ -1,10 +1,10 @@
 import React from 'react'
 import CircularProgressbar from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import './cal.css'
+
 import {connect} from 'react-redux'
 import {newCal} from '../../action/Action_cal'
-import Online from '../online/online';
+import Online from '../Online/online'
 
 class Cal extends React.Component {
     constructor(props) {

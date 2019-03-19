@@ -1,11 +1,12 @@
 import React from 'react'
 import {reduxForm, Field} from 'redux-form';
 import { connect } from 'react-redux';
-import {required,length} from '../validators'
-import {newUser} from '../action/Action_users'
-import {login} from '../action/Action_auth'
-import Input from './input';
-import './sign-up.css'
+import {required,length} from '../../validators'
+import {newUser} from '../../action/Action_users'
+import {login} from '../../action/Action_auth'
+import Input from '../Utils/input';
+
+// SignUp Page
  class SignForm extends React.Component {
     constructor(props) {
         super(props);

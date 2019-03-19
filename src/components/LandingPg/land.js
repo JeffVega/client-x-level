@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './Header/Header'
-import BackgroundImg from './photos/x-level-update.jpg'
+import Header from '../Header/Header'
+import BackgroundImg from '../Utils/Imgs/x-level-update.jpg'
 
 
 export default class Landing extends React.Component{

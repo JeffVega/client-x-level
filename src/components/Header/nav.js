@@ -1,5 +1,4 @@
 import React from 'react'
-import './nav.css'
 import {connect} from 'react-redux';
 import {clearAuthToken} from '../../local-storage'
 import {LogoutUser} from '../../action/Action_auth'
@@ -18,7 +17,7 @@ export class Nav extends React.Component{
       loginLinks =(
         <nav className='listed-links'>
             <ul className="nav-links">
-                <Link to="/cal">
+                <Link to="/dash">
                     <li>Home</li>
                 </Link>
                   <Link to="/food">
