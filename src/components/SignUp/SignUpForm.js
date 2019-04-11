@@ -28,8 +28,10 @@ import Input from '../Utils/input';
         
         const passwordLength = length({min: 10, max: 72});
         return (
-            <div className="sign_up_page">
+            <div className="SignUp">
+            <h1 className="SignUp__thankMsg">
             {this.state.msg ? this.state.msg : ''}
+            </h1>
             <form
             className="sign_up_page_form"
             onSubmit={this.props.handleSubmit(values =>

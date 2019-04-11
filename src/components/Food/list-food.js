@@ -19,10 +19,10 @@ class ListFood extends React.Component {
                     .foodOutput
                     .map((foods, index) => (
                         
-                        <div key={index} className="workout-happens">
+                        <div key={index} className="foodIndex">
                             <p><strong>Food:</strong>{foods.food}</p>
                             <p><strong>Calories:</strong>{foods.calories}</p>
-                            <p className="list-date">{foods.create}</p>
+                            <p className="foodIndex__date">{foods.create}</p>
                                <button onClick={() =>this.props.dispatch(deletefood(foods.id))}> Trash</button>                            
                         </div>
                     ))}

@@ -1,0 +1,13 @@
+
+$color-main: #3f3f;
+
+.landingPage{
+    position: absolute;
+    &__info{
+    display: inline;
+    }
+    &__banner{
+        font-size: 20px;
+        color:$color-main;
+    }
+}

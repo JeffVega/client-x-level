@@ -7,15 +7,15 @@ export default class LoginPage extends React.Component {
     render() {
         return (
 
-            <div className='login_landing_page'>
+            <div className='SignUpPage'>
 
-                <div className="login_in_form">
+                <div className="SignUpPage__formContainer">
 
                     <SignUp/>
-                    <Link className="signup-banner" to="/signup">
+                    <Link className="SignUpPage__create-btn" to="/signup">
                         <p>Create an Account</p>
                     </Link>
-                    <Link className="information" to="/home">
+                    <Link className="SignUpPage__info-btn" to="/home">
                         <p>Information</p>
                     </Link>
 

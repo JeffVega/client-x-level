@@ -24,8 +24,8 @@ class LoginForm extends React.Component {
             );
         }
         return (
-            <div>                    
-                <div className="testlogin">
+            <div className="loginPage">                    
+                <div className="loginPage__test">
                         <h3>Test Login</h3>
                             <p>Login:test1</p>
                             <p>Pass:12345678910</p>
@@ -34,17 +34,17 @@ class LoginForm extends React.Component {
                     onSubmit={this
                     .props
                     .handleSubmit(values => this.submitForm(values))}
-                    className="container_login_form">
+                    className="loginForm">
 
                     {error}
-                    <h3 className="member_login_info">Member Login</h3>
+                    <h3 className="loginForm__loginInfo">Member Login</h3>
                     <Field
                         className="field"
                         component={Input}
                         type="text"
                         name="username"
                         placeholder="Username"/>
-                    <br/>
+
                     
                     <Field
                         className="field"
@@ -52,9 +52,9 @@ class LoginForm extends React.Component {
                         type="password"
                         name="password"
                         placeholder="Password"/>
-                    <br/>
-                    <button type="submit" id="login-button">LOGIN</button>
-                    <br/><br/>
+
+                    <button type="submit" id="loginForm__btn">LOGIN</button>
+
                 </form>
             </div>
         );
