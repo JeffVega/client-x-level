@@ -1,7 +1,52 @@
-.landingPage {
-  position: absolute; }
-  .landingPage__info {
-    display: inline; }
-  .landingPage__banner {
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background: #1d2b3f91; }
+  .nav__list a {
+    text-decoration: none;
     font-size: 20px;
-    color: #3f3f; }
+    color: #edfffa;
+    font-weight: bolder;
+    letter-spacing: 1px; }
+  .nav__list li {
+    margin: 10px;
+    list-style: none; }
+
+.landingPage {
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden; }
+  .landingPage__bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; }
+  .landingPage__banner {
+    display: flex;
+    justify-content: center;
+    color: white; }
+  .landingPage__boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px; }
+    .landingPage__boxes div {
+      text-align: center;
+      border: 1px solid white;
+      background: rgba(255, 255, 255, 0.493);
+      width: 300px;
+      height: 450px;
+      border-radius: 5px; }
+    .landingPage__boxes div p {
+      color: black;
+      text-transform: uppercase;
+      font-size: 30px; }

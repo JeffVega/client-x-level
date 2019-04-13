@@ -16,18 +16,18 @@ export default class Landing extends React.Component{
         <img className="landingPage__bg" alt="bg-img-for-x-level" src={BackgroundImg}  />
             <h1 className="landingPage__banner">A CUSTOM MACRO PLAN </h1>
                 <div className="landingPage__boxes">
-                <div>
-                    <p>
-                        Marcos
+                <div className="cards">
+                    <p className="cards__text">
+                    Macro
                     </p>
                 </div>
-                <div>
-                    <p>
+                <div className="cards">
+                    <p className="cards__text">
                     Food
                     </p>
                 </div>
-                <div>
-                    <p>
+                <div className="cards">
+                    <p className="cards__text">
                     Workout
                     </p>
                 </div>
