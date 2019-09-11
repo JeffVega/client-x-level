@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 
 import Header from './Header/Header'
-import Cal from './Calculator/cal'
+import Cal from './calculator/cal'
 
 export default class Main extends Component{
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Header/Header'
-import BackgroundImg from '../Utils/Imgs/x-level-update.jpg'
+import ReactSVG from 'react-svg'
+import Svg from '../Utils/Imgs/push-up.svg'
 
 
 export default class Landing extends React.Component{
@@ -12,27 +13,15 @@ export default class Landing extends React.Component{
     <div className='landingPage'>
 
     <Header/>
-    <div className='landingPage__info'>
-        <img className="landingPage__bg" alt="bg-img-for-x-level" src={BackgroundImg}  />
-            <h1 className="landingPage__banner">A CUSTOM MACRO PLAN </h1>
-                <div className="landingPage__boxes">
-                <div className="cards">
-                    <p className="cards__text">
-                    Macro
-                    </p>
-                </div>
-                <div className="cards">
-                    <p className="cards__text">
-                    Food
-                    </p>
-                </div>
-                <div className="cards">
-                    <p className="cards__text">
-                    Workout
-                    </p>
-                </div>
-                </div>
-            </div>
+        <h1 className="landingPage__banner">X-level</h1>
+        <div className="landingPage__elements">
+        <div className="landingPage__info">
+        <h1>The Simplest way to lose weight</h1>
+        <p>X-level mananges your weight loss program, so you dont have to  </p>
+        
+        </div>
+        <img src={Svg} className="svgfile"/>
+        </div>
       </div>
   )
 }

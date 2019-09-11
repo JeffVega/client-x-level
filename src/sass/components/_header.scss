@@ -2,14 +2,24 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-   background: #1d2b3f91;
+ 
   
     & a{
         text-decoration: none;
         font-size: 20px;
-        color:#edfffa;
+        color:black;
         font-weight: bolder;
         letter-spacing: 1px;
+        transition: 0.2s ease-in;
+        vertical-align: top;
+        &::before{
+            content: " ";
+           
+        }
+        &:hover{
+            color:rgb(171, 238, 144);
+            border-bottom: 1px solid rgb(171, 238, 144);;
+        }
     }
     & li{
         margin: 10px;

@@ -25,11 +25,7 @@ class LoginForm extends React.Component {
         }
         return (
             <div className="loginPage">                    
-                <div className="loginPage__test">
-                        <h3>Test Login</h3>
-                            <p>Login:test1</p>
-                            <p>Pass:12345678910</p>
-                    </div>
+               
                 <form
                     onSubmit={this
                     .props
@@ -37,7 +33,7 @@ class LoginForm extends React.Component {
                     className="loginForm">
 
                     {error}
-                    <h3 className="loginForm__loginInfo">Member Login</h3>
+                    <p className="loginForm__loginInfo">Member Login</p>
                     <Field
                         className="field"
                         component={Input}
