@@ -1,7 +1,10 @@
+
+$light-one:#DCE35B;
+$light-two:#45B649;
 .overlay {
 	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: -webkit-linear-gradient(to right, rgb(191, 255, 43), rgb(62, 117, 26));
+	background: linear-gradient(to right, $light-one, $light-two);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -85,8 +88,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid $light-one;
+	background-color: $light-one;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -126,4 +129,51 @@ input {
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
+}
+
+.overlay {
+    transform: translatex(-0px);
+
+}
+
+.loginForm {
+    margin: 10px auto;
+}
+.form-error {
+    color:red;
+    animation: error 1s;
+}
+@keyframes error{
+    from:{
+       font-weight: bolder;
+    }
+    to{
+        font-weight: 600;
+    }
+}
+.loginForm {
+    display: flex;
+     max-width: 100%;
+     width: 500px;
+    margin: 200px 100px;
+    align-items: flex-start;
+    justify-items: center;
+}
+#username {
+    width:250px;
+    
+}
+#password {
+    width: 250px;
+}
+
+#root > div > .loginPage p{
+    margin: 0;
+    padding: 10px;
+    
+    
+};
+
+.overlay-right a {
+    color:white
 }
