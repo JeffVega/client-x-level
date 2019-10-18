@@ -12,7 +12,6 @@ export default class Landing extends React.Component{
     <div className='landingPage'>
 
     <Header/>
-        <h1 className="landingPage__banner"><img src={logo} alt="man-holding-bar"/></h1>
         <div className="landingPage__elements">
         <div className="landingPage__info">
         <h1>The Simplest way to lose weight</h1>
