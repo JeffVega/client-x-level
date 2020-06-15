@@ -26,6 +26,12 @@
     margin: 10px;
     list-style: none; }
 
+/* brute force css  need to be fixed soon*/
+.landingPage__banner {
+  position: absolute;
+  top: 10px;
+  left: 20px; }
+
 .landingPage {
   height: 100vh;
   background: rgba(253, 251, 251, 0.37); }
