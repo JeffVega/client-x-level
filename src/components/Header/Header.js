@@ -1,15 +1,14 @@
 import React from 'react'
-import './Header.css'
 import Nav from './nav'
-import logo from '../photos/logo.png'
+import logo from '../Utils/Imgs/logo.png'
 
 export default function header(props){
       
   
     return (
-      <div className="header_main_page">
-        <header role="banner" >
-          <img className="logo_img"src={logo} alt="logo for x level" />
+      <div className="landing">
+        <header role="landing__banner" >
+        <img src={logo} className="landingPage__banner" alt="man-holding-bar"/>
          <Nav/>
          </header>
        

@@ -18,8 +18,8 @@ import { getOnlineUsers } from '../../action/Action_online';
               {this.props.onlineOutput
             .map((onliner,index) =>(
                 
-                <div key={index} >
-                <p>Online:{onliner.username}</p>
+                <div key={index} className="online" >
+                <p className="online__users">Online:{onliner.username}</p>
                 </div>
             ))}
              </div>

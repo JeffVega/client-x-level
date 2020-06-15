@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {deleteWorkouts}  from '../../action/Action_workout';
 import { getWorkouts } from '../../action/Action_workout';
-import './style/list-workout.css'
+
  class ListWorkouts extends React.Component{
 
   componentDidMount(){

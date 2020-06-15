@@ -1,0 +1,46 @@
+.landingPage{
+    height: 100vh;
+    background: rgba(253,251,251,0.37);
+   
+    &__banner{
+        text-align: center;
+        font-size: 55px;
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        margin: 5px auto;
+        letter-spacing: 10px;
+    }
+    &__elements{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    &__info{
+       display: flex;
+        flex-direction: column;
+        margin: 200px 50px;
+        padding-left: 25px;
+        height:200px;
+        width: 400px;
+        justify-content: space-evenly;
+    
+        h1{
+            font-size: 50px;
+           width:400px;
+            color: rgb(113,112,112);
+        }
+        
+        p{
+            font-size: 16px;
+          
+        }
+    }
+}
+
+.svgfile{
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+    border-radius: 5% 100% 
+}

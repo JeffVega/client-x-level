@@ -37,12 +37,12 @@ render(){
   return (
     <div>
       <Header/>
-      <div className="input-form">
-      <h3 className="workout-input">Food Inputs</h3>
+      <div className="food">
+      <h3 className="food__banner">Food Inputs</h3>
     <form       
     onSubmit={this.submitForm.bind(this)}
-    className="container">
-    <br/><br/>
+    className="workForm">
+ 
     
     <input type="text"
     onChange={this.handleFoodChanged.bind(this)}
@@ -54,14 +54,14 @@ render(){
      placeholder="Calories"
       name="calories" 
       required/>    
-      <br/><br/>  
+
     <button
-    className="button-sign" 
+    className="workForm__button" 
     type="submit">Add Food</button>
-  <br/><br/>
+  
   </form>
   </div>
-  <br/><br/>
+
   <FoodList/>
   </div>
   );

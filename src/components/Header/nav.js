@@ -1,5 +1,4 @@
 import React from 'react'
-import './nav.css'
 import {connect} from 'react-redux';
 import {clearAuthToken} from '../../local-storage'
 import {LogoutUser} from '../../action/Action_auth'
@@ -16,27 +15,27 @@ export class Nav extends React.Component{
 
     if(this.props.loggedIn){
       loginLinks =(
-        <nav className='listed-links'>
-            <ul className="nav-links">
-                <Link to="/cal">
+        <nav className='loginNav'>
+            <ul className="loginNav__listed">
+                <Link to="/dash">
                     <li>Home</li>
                 </Link>
                   <Link to="/food">
                     <li>Food</li>
-                          </Link>
-                          <Link to="/workout">
-                            <li>Workouts</li>
-                          </Link>
-                          <Link   className="logout_link" onClick={() => this.logOut()}  to="/">
-                    <li>Logout</li>
-                          </Link>
+                  </Link>
+                  <Link to="/workout">
+                    <li>Workouts</li>
+                  </Link>
+                  <Link  className="loginNav__logout-link" onClick={() => this.logOut()}  to="/">
+                     <li>Logout</li>
+                  </Link>
             </ul>
         </nav>
       )}
       else {
         loginLinks =(
-      <nav className="nav-bar">
-          <ul className="nav-duo">
+      <nav className="nav">
+          <ul className="nav__list">
             <Link to="/signin">
             <li>Login</li>
             </Link>
