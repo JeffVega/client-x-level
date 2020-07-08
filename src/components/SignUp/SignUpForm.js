@@ -1,6 +1,7 @@
 import React from 'react'
 import {reduxForm, Field} from 'redux-form';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 import {required,length} from '../../validators'
 import {newUser} from '../../action/Action_users'
 import {login} from '../../action/Action_auth'
@@ -61,7 +62,11 @@ import Input from '../Utils/input';
                         type="submit">
                         REGISTER 
                     </button>
+                    <Link to='/signin'>
+                Already have an account? Login In
+            </Link>
             </form>
+           
             </div>
         );
     }

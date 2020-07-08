@@ -9,14 +9,15 @@ export default class LoginPage extends React.Component {
    
         return (
                 <div className="loginPage">
+                    <div className="loginPage_container">
+
                     
                     <LoginIn/>
-                        <Link className="loginPage__signin-btn" to="/signin">
-                            <p>Sign In</p>
-                        </Link>
+                        
                         <Link className="loginPage__info-btn" to="/home">
-                            <p>Information</p>
+                            <p className="dash-link">Dashboard</p>
                         </Link>
+                        </div>
     <div className="overlay-container">
 		<div className="overlay">
 			<div className="overlay-panel overlay-right">
@@ -29,13 +30,7 @@ export default class LoginPage extends React.Component {
                     > Sign Up</Link>
                 </button>
 			</div>
-			<div className="overlay-panel overlay-left">
-				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
-				<button className="ghost" id="signUp">
-                    <Link to="/signup"></Link>
-                </button>
-			</div>
+			
 		</div>
 	</div>
 </div>

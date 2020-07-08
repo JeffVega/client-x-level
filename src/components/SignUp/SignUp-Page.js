@@ -12,13 +12,11 @@ export default class LoginPage extends React.Component {
                 <div className="SignUpPage__formContainer">
 
                     <SignUp/>
-                    <Link className="SignUpPage__create-btn" to="/signup">
-                        <p>Create an Account</p>
-                    </Link>
+                   
                     <Link className="SignUpPage__info-btn" to="/home">
-                        <p>Information</p>
+                        <p>Return To DashBoard</p>
                     </Link>
-
+                    
                 </div>
             </div>
         )
