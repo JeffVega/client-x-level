@@ -2,7 +2,7 @@ import React from 'react';
 import Cal from '../Calculator/cal';
 import Online from '../Online/online';
 
-const UserHome = () =>{
+export default function UserHome() {
    return(
 
    <div className="user">
@@ -19,5 +19,3 @@ const UserHome = () =>{
     </div>
    ) 
 }
-
-export default UserHome;
