@@ -15,8 +15,8 @@ export class Nav extends React.Component{
 
     if(this.props.loggedIn){
       loginLinks =(
-        <nav className='loginNav'>
-            <ul className="loginNav__listed">
+        <nav className='nav'>
+            <ul className="nav__list">
                 <Link to="/dash">
                     <li>Home</li>
                 </Link>

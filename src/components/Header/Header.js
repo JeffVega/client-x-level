@@ -7,8 +7,10 @@ export default function header(props){
   
     return (
       <div className="landing">
-        <header role="landing__banner" >
-        <img src={logo} className="landingPage__banner" alt="man-holding-bar"/>
+        <header role="header" className="header" >
+          <div>
+          <img src={logo} className="landingPage__banner" alt="man-holding-bar"/>
+          </div>
          <Nav/>
          </header>
        
