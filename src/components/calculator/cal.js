@@ -61,15 +61,15 @@ class Cal extends React.Component {
     render() {
 
         return (
-            <div className="landing_starter">
-                <h1 className="bannerform">CALCULATE YOUR TOTAL DAILY ENERGY
+            <div className="cal">
+                <h1 className="cal_header">CALCULATE YOUR TOTAL DAILY ENERGY
                 </h1>
-                <div className="cal-form">
+                <div className="cal_formContainer">
                     <form
                         onSubmit={this
                         .submitForm
                         .bind(this)}
-                        className="calform">
+                        className="cal_form">
                         <label>Age</label>
                         <input
                             required
@@ -220,10 +220,7 @@ class Cal extends React.Component {
                         </div>
                     ))
 }
-<div className="online_user">
-<h1>Online Users</h1>
-<Online/>
-</div>
+
             </div>
 
         );

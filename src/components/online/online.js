@@ -15,6 +15,7 @@ import { getOnlineUsers } from '../../action/Action_online';
          
          return(
              <div>
+                 <h1>Online User</h1>
               {this.props.onlineOutput
             .map((onliner,index) =>(
                 

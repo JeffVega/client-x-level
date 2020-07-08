@@ -5,9 +5,17 @@ import Online from '../Online/online';
 const UserHome = () =>{
    return(
 
-   <div>
-    <Cal/>
-    <Online/>
+   <div className="user">
+       <div>
+
+       </div>
+       <div className="user_cal panel-open">
+            <Cal/>
+       </div>
+       <div className="user_online">
+
+        <Online/>
+       </div>
     </div>
    ) 
 }

@@ -234,3 +234,39 @@ input {
   width: 500px;
   padding: 5em;
   border-radius: 10px; }
+
+select {
+  width: 100%;
+  height: 25px;
+  border: none;
+  background: #f3efef; }
+
+.cal_header {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #58ab58; }
+
+.button-cal {
+  margin-top: 20px;
+  font-size: 27px; }
+
+.user {
+  display: grid;
+  grid-template-areas: "cal cal  online" " . . food" " . . food" " . . workout";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 50px auto 70px;
+  justify-items: center; }
+  .user_cal {
+    width: 50%;
+    grid-area: cal;
+    padding: 5px;
+    grid-row: 1 / 2; }
+  .user_online {
+    grid-area: online; }
+
+.panel-closed {
+  transform: translateX(-2000%); }
+
+.panel-open {
+  transform: translateX(0); }
