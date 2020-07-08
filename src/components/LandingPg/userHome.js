@@ -1,5 +1,5 @@
 import React from 'react';
-import Cal from './Calculator/cal';
+import Cal from '../Calculator/cal';
 import Online from '../Online/online';
 
 
