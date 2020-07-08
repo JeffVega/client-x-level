@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 
 import Header from './Header/Header'
-import Cal from './Calculator/cal'
+import UserHome from './LandingPg/userHome';
 
 export default class Main extends Component{
 
@@ -11,7 +11,7 @@ return (
   <div>
     
 <Header/>
-<Cal/>
+<UserHome/>
 </div>
 
 )
