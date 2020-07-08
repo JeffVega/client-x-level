@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../Header/Header';
 import Svg from '../Utils/Imgs/push-up.svg';
-import logo from '../Utils/Imgs/logo.png'
+
 
 export default class Landing extends React.Component{
   
