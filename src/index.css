@@ -5,6 +5,10 @@
   margin: 0;
   font-family: 'Roboto', sans-serif; }
 
+@media screen and (max-width: 380px) {
+  .workoutForm, .workForm {
+    justify-content: flex-start; } }
+
 .nav__list {
   display: flex;
   flex-direction: row;
@@ -37,6 +41,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
+  @media screen and (max-width: 380px) {
+    .header {
+      flex-direction: column; } }
 
 .landingPage {
   height: 100vh;
@@ -53,6 +60,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly; }
+    @media screen and (max-width: 780px) {
+      .landingPage__elements {
+        flex-direction: column;
+        transform: translateY(300px); } }
+    @media screen and (max-width: 380px) {
+      .landingPage__elements {
+        flex-direction: column;
+        transform: translateY(200px); } }
   .landingPage__info {
     display: flex;
     flex-direction: column;
@@ -61,18 +76,41 @@
     height: 200px;
     width: 400px;
     justify-content: space-evenly; }
+    @media screen and (max-width: 780px) {
+      .landingPage__info {
+        margin: 10px auto;
+        padding: 0;
+        width: 100%;
+        height: 0;
+        align-items: center;
+        color: black; } }
     .landingPage__info h1 {
       font-size: 50px;
       width: 400px;
       color: #717070; }
+      @media screen and (max-width: 780px) {
+        .landingPage__info h1 {
+          color: black;
+          text-align: center;
+          background: rgba(128, 128, 128, 0.527);
+          border-radius: 50%; } }
     .landingPage__info p {
       font-size: 16px; }
+      @media screen and (max-width: 780px) {
+        .landingPage__info p {
+          text-align: center; } }
 
 .svgfile {
   max-width: 100%;
   width: 700px;
   height: auto;
   border-radius: 5% 100%; }
+  @media screen and (max-width: 780px) {
+    .svgfile {
+      width: 100%;
+      position: absolute;
+      left: 25px;
+      z-index: -2; } }
 
 .overlay {
   background: #FF416C;
@@ -88,9 +126,15 @@
   justify-items: flex-start;
   align-self: center;
   height: 100vh; }
+  @media screen and (max-width: 425px) {
+    .overlay {
+      display: none; } }
 
 .overlay-container {
   width: 500%; }
+  @media screen and (max-width: 425px) {
+    .overlay-container {
+      display: none; } }
 
 .container.right-panel-active .overlay {
   transform: translateX(50%); }
@@ -164,7 +208,7 @@ button.ghost {
   background-color: transparent;
   border-color: #FFFFFF; }
 
-form {
+.loginForm {
   background-color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -173,6 +217,11 @@ form {
   padding: 0 50px;
   height: 100%;
   text-align: center; }
+  @media screen and (max-width: 425px) {
+    .loginForm {
+      height: 100vh;
+      margin: 5px auto;
+      width: 100%; } }
 
 input {
   background-color: #eee;

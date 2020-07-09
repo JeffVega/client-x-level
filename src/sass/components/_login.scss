@@ -21,6 +21,9 @@ $light-two:#45B649;
 	justify-items: flex-start;
 	align-self: center;
 	height: 100vh;
+	@media screen and (max-width:425px) {
+		display: none;
+	}
 }
 
 .overlay-container {
@@ -32,7 +35,9 @@ $light-two:#45B649;
 	// overflow: hidden;
 	// transition: transform 0.6s ease-in-out;
 	// z-index: 100;
-	
+	@media screen and (max-width:425px) {
+		display: none;
+	}
 	
 
 }
@@ -53,6 +58,8 @@ $light-two:#45B649;
 	width: 100%;
 	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
+
+	
 }
 
 .overlay-left {
@@ -121,7 +128,7 @@ button.ghost {
 	border-color: #FFFFFF;
 }
 
-form {
+.loginForm {
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -130,6 +137,12 @@ form {
 	padding: 0 50px;
 	height: 100%;
 	text-align: center;
+	@media screen and (max-width:425px) {
+		
+		height: 100vh;
+		margin: 5px auto;
+		width: 100%;
+	}
 }
 
 input {
@@ -158,14 +171,7 @@ input {
         font-weight: 600;
     }
 }
-.loginForm {
-    // display: flex;
-    //  max-width: 100%;
-    //  width: 500px;
-    // margin: 200px 100px;
-    // align-items: flex-start;
-    // justify-items: center;
-}
+
 #username {
     width:250px;
     

@@ -7,7 +7,7 @@ export default function header(props){
   
     return (
       <div className="landing">
-        <header role="header" className="header" >
+        <header  className="header" >
           <div>
           <img src={logo} className="landingPage__banner" alt="man-holding-bar"/>
           </div>

@@ -36,6 +36,11 @@ export class Nav extends React.Component{
         loginLinks =(
       <nav className="nav">
           <ul className="nav__list">
+            {/* <div className="nav_mobile">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div> */}
             <Link to="/signin">
             <li>Login</li>
             </Link>
