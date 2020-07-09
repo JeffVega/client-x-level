@@ -1,7 +1,7 @@
 # X-Level
 
 ## View the Project live here:
-https://x-level.netlify.com/
+https://x-level.netlify.app/
 
 ## View the Backend code here:
 https://github.com/JeffVega/server-x-level
@@ -29,7 +29,7 @@ X-level is an application used to help users keep track of the food they've eate
 * Heroku
 * mLab
 * Netlify
-## Screenshots
+## Screenshots Not Updated
 ![landing-page](https://user-images.githubusercontent.com/34497456/50061153-c7592e00-0151-11e9-8450-3b91706aa17d.PNG)
 ![Login-In && Sign Up](https://user-images.githubusercontent.com/34497456/50061138-9da00700-0151-11e9-9a5a-3010d219afd0.PNG)
 ![cal](https://user-images.githubusercontent.com/34497456/50061113-5f0a4c80-0151-11e9-8463-f3c96dc581ad.PNG)
